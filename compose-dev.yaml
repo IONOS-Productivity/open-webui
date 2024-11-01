@@ -1,0 +1,47 @@
+name: open-webui-dev
+
+services:
+  frontend:
+    build:
+      context: .
+      target: build
+    command: ["npm", "run", "dev"]
+    depends_on:
+      - backend
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./:/app:rw,z
+    develop:
+      watch:
+        path: ./src
+        action: sync
+
+  backend:
+    build:
+      context: .
+      target: base
+    command: ["bash", "dev.sh"]
+    env_file: ".env"
+    environment:
+      - ENV=dev
+      - WEBUI_AUTH=False
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      - data:/app/backend/data
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:
+      - ./backend:/app/backend:rw,z
+    develop:
+      watch:
+        path: ./backend
+        action: sync
+
+volumes:
+  data: {}
