@@ -68,7 +68,10 @@ class StorageProvider:
             raise RuntimeError("S3 Client is not initialized.")
 
         try:
-            bucket_name, key = file_path.split("//")[1].split("/")
+            bucket_name = self.bucket_name
+            if "//" in file_path:
+                file_path = file_path.split("//")[1]
+            key = os.path.basename(file_path)
             local_file_path = f"{UPLOAD_DIR}/{key}"
             self.s3_client.download_file(bucket_name, key, local_file_path)
             return local_file_path
