@@ -3,6 +3,8 @@ from typing import Optional
 
 from open_webui.apps.webui.internal.db import Base, JSONField, get_db
 from open_webui.apps.webui.models.chats import Chats
+from open_webui.apps.webui.models.files import Files
+from open_webui.apps.webui.models.memories import Memories
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import BigInteger, Column, String, Text
 
@@ -225,18 +227,29 @@ class UsersTable:
 
     def delete_user_by_id(self, id: str) -> bool:
         try:
-            # Delete User Chats
+            user_id = id
+            result = Memories.delete_memories_by_user_id(user_id)
+
+            if not result:
+                return False
+
+            result = Files.delete_files_by_user_id(user_id)
+
+            if not result:
+                return False
+
             result = Chats.delete_chats_by_user_id(id)
 
-            if result:
-                with get_db() as db:
-                    # Delete User
-                    db.query(User).filter_by(id=id).delete()
-                    db.commit()
+            if not result:
+                return False
+
+            with get_db() as db:
+                # Delete User
+                db.query(User).filter_by(id=id).delete()
+                db.commit()
 
                 return True
-            else:
-                return False
+
         except Exception:
             return False
 
