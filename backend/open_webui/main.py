@@ -921,6 +921,9 @@ async def get_all_models():
     openai_models = []
     ollama_models = []
 
+    import pydevd
+    pydevd.settrace(host='192.168.122.1')
+
     if app.state.config.ENABLE_OPENAI_API:
         openai_models = await get_openai_models()
         openai_models = openai_models["data"]
