@@ -6,10 +6,15 @@ services:
       context: .
       target: build
     command: ["sh", "/app/src/frontend-dev.sh"]
+    environment:
+      # Needed for vite build - prevents heap exhausted error
+      - NODE_OPTIONS=--max-old-space-size=3100
     depends_on:
       - backend
     ports:
       - "3000:5173"
+      # Preview server
+      # - "3000:4173"
     extra_hosts:
       - host.docker.internal:127.0.0.1
     volumes:
