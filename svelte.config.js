@@ -16,6 +16,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		paths: {
+			// TODO this is duplicated in vite.config.ts, source from ENV instead
 			// https://svelte.dev/docs/kit/configuration#paths
 			base: "/chat",
 			relative: true

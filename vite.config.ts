@@ -17,6 +17,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	// https://vite.dev/config/shared-options.html#base
+	// https://vite.dev/guide/build.html#public-base-path
+	// TODO this is duplicated in svelte.config.js, source from ENV instead
+	base: "/chat",
 	define: {
 		APP_VERSION: JSON.stringify(process.env.npm_package_version),
 		APP_BUILD_HASH: JSON.stringify(process.env.APP_BUILD_HASH || 'dev-build')
