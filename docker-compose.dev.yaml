@@ -12,14 +12,10 @@ services:
     depends_on:
       - backend
     ports:
-      # Dev server
-      # - "3000:5173"
+      - "3000:5173"
       # Preview server
-      # Start with node_modules/.bin/vite preview -d
-      - "3000:4173"
+      # - "3000:4173"
     extra_hosts:
-      # Required for the Vite preview server
-      - localhost:127.0.0.1
       - host.docker.internal:127.0.0.1
     volumes:
       - ./src:/app/src
