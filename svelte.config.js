@@ -14,7 +14,12 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: 'index.html'
-		})
+		}),
+		paths: {
+			// https://svelte.dev/docs/kit/configuration#paths
+			base: "/chat",
+			relative: true
+		}
 	},
 	onwarn: (warning, handler) => {
 		const { code, _ } = warning;
