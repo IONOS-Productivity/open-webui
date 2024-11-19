@@ -33,6 +33,15 @@ export default {
 			},
 			padding: {
 				'safe-bottom': 'env(safe-area-inset-bottom)'
+			},
+			height: {
+				screen: '89.5vh'
+			},
+			minHeight: {
+				screen: '89.5vh'
+			},
+			maxHeight: {
+				screen: '89.5vh'
 			}
 		}
 	},

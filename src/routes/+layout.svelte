@@ -1,6 +1,8 @@
 <script>
 	import { io } from 'socket.io-client';
 	import { spring } from 'svelte/motion';
+	import IonosHeader from '$lib/IONOS/components/IONOSHeader.svelte';
+	import IonosFooter from '$lib/IONOS/components/IONOSFooter.svelte';
 
 	let loadingProgress = spring(0, {
 		stiffness: 0.05
@@ -205,10 +207,12 @@
 	<link rel="stylesheet" type="text/css" href="/themes/rosepine-dawn.css" /> -->
 </svelte:head>
 
+<IonosHeader />
 {#if loaded}
 	<slot />
 {/if}
 
+<IonosFooter />
 <Toaster
 	theme={$theme.includes('dark')
 		? 'dark'
