@@ -72,3 +72,29 @@
 	text-overflow: ellipsis;
 	white-space: nowrap
 }
+
+.exos-link,.exos-toggle-link {
+	word-wrap: break-word;
+	cursor: pointer;
+	font-family: var(--default-font-regular,"OpenSansRegular",arial,arial narrow,sans-serif);
+	font-size: var(--default-text-size,14px);
+	line-height: var(--default-text-line-height,20px);
+	text-decoration: none
+}
+
+.exos-link,.exos-link:before,.exos-toggle-link,.exos-toggle-link:before {
+	color: var(--interactive-text-color,#1474c4)
+}
+
+.__hover.exos-toggle-link,.exos-link.__hover,.exos-link:active,.exos-link:hover,.exos-toggle-link:active,.exos-toggle-link:hover {
+	color: var(--interactive-text-color,#1474c4);
+	text-decoration: underline
+}
+
+.exos-link:active:before,.exos-link:hover:before,.exos-toggle-link:active:before,.exos-toggle-link:hover:before {
+	color: var(--interactive-text-color,#1474c4)
+}
+
+.exos-link:hover span,.exos-toggle-link:hover span {
+	text-decoration: none
+}
