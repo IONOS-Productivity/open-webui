@@ -1,0 +1,24 @@
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ion-background-color: #0d0d0d;
+		--ion-background-color-hover: #333;
+		--ion-text-color: #f9f9f9;
+		--ion-brand-color: #f4f7fa;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--ion-background-color: #f9f9f9;
+		--ion-background-color-hover: #ececec;
+		--ion-text-color: #0d0d0d;
+		--ion-brand-color: var(--ion-color-primary);
+	}
+}
+
+:root {
+	--ion-color-primary: #003d8f;
+	--ion-color-secondary: #001b41;
+	--ion-color-blue-b4: #1474c4;
+	--ion-color-blue-b5: #095bb1;
+}
