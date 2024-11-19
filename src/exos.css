@@ -1,0 +1,74 @@
+.exos-button,.exos-toggle-button {
+	background-color: var(--secondary-button-background-color,#0000);
+	border: var(--button-border-width,2px) solid var(--secondary-button-border-color,#0b2a63);
+	border-radius: var(--button-border-radius,24px);
+	box-sizing: border-box;
+	color: var(--secondary-button-text-color,#0b2a63);
+	display: inline-block;
+	font-family: var(--button-font-family,"OpenSansSemibold",arial,sans-serif);
+	font-size: var(--button-font-size,14px);
+	line-height: 24px;
+	margin-right: 12px;
+	padding: var(--button-padding,4px 20px);
+	text-align: center;
+	text-decoration: none;
+	transition: color .1s ease-out,background-color .1s ease-out,border-color .1s ease-out
+}
+
+.exos-button circle,.exos-button path,.toggle-button circle,.toggle-button path {
+	fill: var(--secondary-button-text-color,#0b2a63);
+	transition: fill .2s ease-out
+}
+
+.exos-button::-moz-focus-inner,.toggle-button::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+
+.exos-button:link,.exos-button:visited,.toggle-button:link,.toggle-button:visited {
+	outline: 0 none
+}
+
+.exos-button:has(+.exos-button--hidden:last-child),.exos-button:has(+.hidden:last-child),.exos-button:last-child,.exos-button:only-child,.toggle-button:has(+.exos-button--hidden:last-child),.toggle-button:has(+.hidden:last-child),.toggle-button:last-child,.toggle-button:only-child {
+	margin-right: 0
+}
+
+.__hover.exos-toggle-button:not(.exos-button--disabled),.exos-button.__hover:not(.exos-button--disabled),.exos-button:active:not(.exos-button--disabled),.exos-button:focus:not(.exos-button--disabled),.exos-button:hover:not(.exos-button--disabled),.exos-toggle-button:active:not(.exos-button--disabled),.exos-toggle-button:focus:not(.exos-button--disabled),.exos-toggle-button:hover:not(.exos-button--disabled) {
+	background-color: var(--hovered-secondary-button-background-color,#0b2a63);
+	border: var(--button-border-width,2px) solid var(--hovered-secondary-button-border-color,#0b2a63);
+	color: var(--hovered-secondary-button-text-color,#fff);
+	cursor: pointer
+}
+
+.__hover.exos-toggle-button:not(.exos-button--disabled) .loading-circle__circle,.exos-button.__hover:not(.exos-button--disabled) .loading-circle__circle,.exos-button:active:not(.exos-button--disabled) .loading-circle__circle,.exos-button:focus:not(.exos-button--disabled) .loading-circle__circle,.exos-button:hover:not(.exos-button--disabled) .loading-circle__circle,.exos-toggle-button:active:not(.exos-button--disabled) .loading-circle__circle,.exos-toggle-button:focus:not(.exos-button--disabled) .loading-circle__circle,.exos-toggle-button:hover:not(.exos-button--disabled) .loading-circle__circle {
+	animation-name: keyframes--loading-circle-bright
+}
+
+
+.exos-button--primary {
+	background-color: var(--primary-button-background-color,#0b2a63);
+	border: var(--button-border-width,2px) solid var(--primary-button-border-color,#0b2a63);
+	color: var(--primary-button-text-color,#fff)
+}
+
+.exos-button--primary circle,.exos-button--primary path {
+	fill: var(--primary-button-text-color,#fff)
+}
+
+.exos-button--primary.__hover:not(.exos-button--disabled),.exos-button--primary:active:not(.exos-button--disabled),.exos-button--primary:focus:not(.exos-button--disabled),.exos-button--primary:hover:not(.exos-button--disabled) {
+	background-color: var(--hovered-primary-button-background-color,#1474c4);
+	border: var(--button-border-width,2px) solid var(--hovered-primary-button-border-color,#1474c4);
+	color: var(--hovered-primary-button-text-color,#fff);
+	cursor: pointer
+}
+
+.exos-button--primary.__hover:not(.exos-button--disabled) circle,.exos-button--primary.__hover:not(.exos-button--disabled) path,.exos-button--primary:active:not(.exos-button--disabled) circle,.exos-button--primary:active:not(.exos-button--disabled) path,.exos-button--primary:focus:not(.exos-button--disabled) circle,.exos-button--primary:focus:not(.exos-button--disabled) path,.exos-button--primary:hover:not(.exos-button--disabled) circle,.exos-button--primary:hover:not(.exos-button--disabled) path {
+	fill: var(--primary-button-text-color,#fff)
+}
+
+
+.exos-button--ellipsized {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
