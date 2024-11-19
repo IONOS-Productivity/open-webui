@@ -1,13 +1,3 @@
-@media (prefers-color-scheme: dark) {
-	:root {
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-	}
-}
-
 :root,[data-exos-theme=ionos] {
 	--default-text-size: 14px;
 	--default-text-line-height: 20px;
@@ -336,4 +326,14 @@
 	--global-navigation-background-color: var(--palette-corporate-6);
 	--global-navigation-border1: #095bb1;
 	--global-navigation-border2: #0b2a63
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+	}
 }
