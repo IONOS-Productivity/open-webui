@@ -5,6 +5,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				ionos: '#003d8f',
 				gray: {
 					50: '#f9f9f9',
 					100: '#ececec',
