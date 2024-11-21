@@ -43,8 +43,21 @@ export const initI18n = (defaultLocale: string | undefined) => {
 		: ['querystring', 'localStorage', 'navigator'];
 	let fallbackDefaultLocale = defaultLocale ? [defaultLocale] : ['en-US'];
 
-	const loadResource = (language: string, namespace: string) =>
-		import(`./locales/${language}/${namespace}.json`);
+	const loadResource = (language: string, namespace: string) => {
+		const baseTexts = import(`./locales/${language}/${namespace}.json`);
+		const overrideTexts = import(`./locales-override/${language}/${namespace}.json`);
+
+		const mergedTexts = Promise.all([baseTexts, overrideTexts]).then(([baseTexts, overrideTexts]) => ({
+			...baseTexts,
+			...overrideTexts,
+			default: {
+				...baseTexts.default,
+				...overrideTexts.default,
+			},
+		}));
+
+		return mergedTexts;
+	};
 
 	i18next
 		.use(resourcesToBackend(loadResource))
