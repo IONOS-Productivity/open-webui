@@ -332,6 +332,8 @@
 	:root {
 		--ion-background-color: #0d0d0d;
 		--ion-brand-color: #f4f7fa;
+		--secondary-button-border-color: #f4f7fa;
+		--secondary-button-background-color: #fff;
 	}
 }
 
