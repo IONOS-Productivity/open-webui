@@ -16,6 +16,7 @@
 	import EyeSlash from '$lib/components/icons/EyeSlash.svelte';
 	import MessageInput from './MessageInput.svelte';
 	import Greeting from './Greeting.svelte';
+	import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -103,7 +104,7 @@
 	{/if}
 
 	<div
-		class="w-full text-3xl text-gray-800 dark:text-gray-100 font-medium text-center flex items-center gap-4 font-primary"
+		class="flex flex-col w-full text-3xl text-gray-800 dark:text-gray-100 font-medium text-center flex items-center gap-4 font-primary"
 	>
 		<div class="w-full flex flex-col justify-center items-center">
 			{#if showModelIconAndName}
@@ -212,6 +213,7 @@
 				/>
 			</div>
 		</div>
+		<Trailer />
 	</div>
 	<div class="mx-auto max-w-2xl font-primary" in:fade={{ duration: 200, delay: 200 }}>
 		<div class="mx-5">
