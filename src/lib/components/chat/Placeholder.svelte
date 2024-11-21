@@ -108,6 +108,7 @@
 		<div class="w-full flex flex-col justify-center items-center">
 			{#if showModelIconAndName}
 			<div class="flex flex-row justify-center gap-3 sm:gap-3.5 w-fit px-5">
+				{#if config?.features?.enable_model_infos}
 				<div class="flex flex-shrink-0 justify-center">
 					<div class="flex -space-x-4 mb-0.5" in:fade={{ duration: 100 }}>
 						{#each models as model, modelIdx}
@@ -137,11 +138,13 @@
 						{/each}
 					</div>
 				</div>
+				{/if}
 
 				<Greeting greeting={models[selectedModelIdx]?.name} />
 			</div>
 			{/if}
 
+			{#if config?.features?.enable_model_infos}
 			<div class="flex mt-1 mb-2">
 				<div in:fade={{ duration: 100, delay: 50 }}>
 					{#if models[selectedModelIdx]?.info?.meta?.description ?? null}
@@ -180,6 +183,7 @@
 					{/if}
 				</div>
 			</div>
+			{/if}
 
 			<div
 				class="text-base font-normal xl:translate-x-6 md:max-w-3xl w-full py-3 {atSelectedModel
