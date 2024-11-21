@@ -15,13 +15,6 @@
 		.sort(() => Math.random() - 0.5);
 </script>
 
-{#if prompts.length > 0}
-	<div class="mb-1 flex gap-1 text-sm font-medium items-center text-gray-400 dark:text-gray-600">
-		<Bolt />
-		{$i18n.t('Suggested')}
-	</div>
-{/if}
-
 <div class=" h-40 max-h-full overflow-auto scrollbar-none {className}">
 	{#each prompts as prompt, promptIdx}
 		<button
