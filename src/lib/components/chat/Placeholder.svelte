@@ -16,6 +16,7 @@
 	import EyeSlash from '$lib/components/icons/EyeSlash.svelte';
 	import MessageInput from './MessageInput.svelte';
 	import Greeting from './Greeting.svelte';
+	import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -226,5 +227,6 @@
 				/>
 			</div>
 		</div>
+		<Trailer />
 	</div>
 {/key}
