@@ -71,6 +71,7 @@ from open_webui.config import (
     ENABLE_ADMIN_CHAT_ACCESS,
     ENABLE_ADMIN_EXPORT,
     ENABLE_MODEL_FILTER,
+    ENABLE_MODEL_INFOS,
     ENABLE_OLLAMA_API,
     ENABLE_OPENAI_API,
     ENV,
@@ -2241,6 +2242,7 @@ async def get_app_config(request: Request):
                     "enable_message_rating": webui_app.state.config.ENABLE_MESSAGE_RATING,
                     "enable_admin_export": ENABLE_ADMIN_EXPORT,
                     "enable_admin_chat_access": ENABLE_ADMIN_CHAT_ACCESS,
+                    "enable_model_infos": ENABLE_MODEL_INFOS,
                 }
                 if user is not None
                 else {}

@@ -789,6 +789,8 @@ WEBHOOK_URL = PersistentConfig(
     "WEBHOOK_URL", "webhook_url", os.environ.get("WEBHOOK_URL", "")
 )
 
+ENABLE_MODEL_INFOS = os.environ.get("ENABLE_MODEL_INFOS", "True").lower() == "true"
+
 ENABLE_ADMIN_EXPORT = os.environ.get("ENABLE_ADMIN_EXPORT", "True").lower() == "true"
 
 ENABLE_ADMIN_CHAT_ACCESS = (
