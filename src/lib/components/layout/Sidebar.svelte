@@ -403,14 +403,14 @@
 <div
 	bind:this={navElement}
 	id="sidebar"
-	class="h-screen max-h-[calc(100%-64px)] min-h-screen select-none {$showSidebar
+	class="h-screen max-h-[calc(100%-64px-32px)] min-h-screen select-none {$showSidebar
 		? 'md:relative w-[260px] max-w-[260px]'
 		: '-translate-x-[260px] w-[0px]'} bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0 overflow-x-hidden
         "
 	data-state={$showSidebar}
 >
 	<div
-		class="py-2 my-auto flex flex-col justify-between h-screen max-h-[calc(100%-64px)] w-[260px] overflow-x-hidden z-50 {$showSidebar
+		class="py-2 my-auto flex flex-col justify-between h-screen max-h-[calc(100%-64px-32px)] w-[260px] overflow-x-hidden z-50 {$showSidebar
 			? ''
 			: 'invisible'}"
 	>
