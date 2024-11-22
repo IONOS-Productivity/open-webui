@@ -35,17 +35,17 @@
 	<Dialog.Content
 		class="bg-[var(--ion-background-color)] sheet fixed left-[50%] top-[50%] z-50 w-full max-w-[94%] translate-x-[-50%] translate-y-[-50%]  p-5 shadow-popover outline-none sm:max-w-[700px] md:w-full"
 	>
-		<Dialog.Close class="sheet__close"></Dialog.Close>
+		<Dialog.Close class="exos-sheet__close"></Dialog.Close>
 		{#if !feedbackSent}
 			<Dialog.Title>
-				<h1 class="card__headline">{$i18n.t('Feedback', { ns: 'ionos' })}</h1>
+				<h1 class="exos-card__headline">{$i18n.t('Feedback', { ns: 'ionos' })}</h1>
 			</Dialog.Title>
-			<Dialog.Description class="paragraph">
+			<Dialog.Description class="exos-paragraph">
 				<p>{$i18n.t('Pass on your impressions, suggestions etc. to us...', { ns: 'ionos' })}</p>
 			</Dialog.Description>
-			<div class="card__content">
+			<div class="exos-card__content">
 				<textarea
-					class="input-textarea"
+					class="exos-input-textarea"
 					placeholder={$i18n.t('Your feedback to us', { ns: 'ionos' })}
 					bind:value={feedbackText}
 					rows="8"
@@ -69,7 +69,7 @@
 				</div>
 			</div>
 
-			<div class="sheet__footer sheet__footer--align-right">
+			<div class="exos-sheet__footer exos-sheet__footer--align-right">
 				<button
 					type="button"
 					class="exos-button exos-button--primary {feedbackProvided ? '' : 'exos-button--disabled'}"
@@ -89,18 +89,18 @@
 				<p>{$i18n.t('Feedback is being sent', { ns: 'ionos' })}</p>
 			{:then}
 				<Dialog.Title>
-					<h1 class="card__headline">{$i18n.t('Thanks!', { ns: 'ionos' })}</h1>
+					<h1 class="exos-card__headline">{$i18n.t('Thanks!', { ns: 'ionos' })}</h1>
 				</Dialog.Title>
 
-				<div class="message message--success">
-					<section class="message__section">
-						<h4 class="headline headline--sub headline--success">
+				<div class="exos-message exos-message--success">
+					<section class="exos-message__section">
+						<h4 class="exos-headline exos-headline--sub exos-headline--success">
 							{$i18n.t('We have received your feedback', { ns: 'ionos' })}
 						</h4>
 					</section>
 				</div>
-				<div class="sheet__footer sheet__footer--align-right">
-					<Dialog.Close class="sheet__footer sheet__footer--align-right">
+				<div class="exos-sheet__footer exos-sheet__footer--align-right">
+					<Dialog.Close class="exos-sheet__footer exos-sheet__footer--align-right">
 						<button type="button" class="exos-button exos-button--primary">
 							{$i18n.t('Close')}
 						</button>
@@ -108,17 +108,17 @@
 				</div>
 			{:catch}
 				<Dialog.Title>
-					<h1 class="card__headline">{$i18n.t('Das hat nicht funktioniert', { ns: 'ionos' })}</h1>
+					<h1 class="exos-card__headline">{$i18n.t('Das hat nicht funktioniert', { ns: 'ionos' })}</h1>
 				</Dialog.Title>
-				<div class="message message--critical">
-					<section class="message__section">
-						<h4 class="headline headline--sub headline--critical">
+				<div class="exos-message exos-message--critical">
+					<section class="exos-message__section">
+						<h4 class="exos-headline exos-headline--sub exos-headline--critical">
 							{$i18n.t('Feedback could not be sent', { ns: 'ionos' })}
 						</h4>
 					</section>
 				</div>
-				<div class="sheet__footer sheet__footer--align-right">
-					<Dialog.Close class="sheet__footer sheet__footer--align-right">
+				<div class="exos-sheet__footer exos-sheet__footer--align-right">
+					<Dialog.Close class="exos-sheet__footer exos-sheet__footer--align-right">
 						<button type="button" class="exos-button exos-button--primary" on:click={resetFeedbackDialog}>
 							{$i18n.t('Back')}
 						</button>
