@@ -40,6 +40,8 @@
 
 	let showShareChatModal = false;
 	let showDownloadChatModal = false;
+
+	const showUserMenu = false;
 </script>
 
 <ShareChatModal bind:show={showShareChatModal} chatId={$chatId} />
@@ -150,6 +152,7 @@
 					</button>
 				</Tooltip>
 
+				{#if showUserMenu}
 				{#if $user !== undefined}
 					<UserMenu
 						className="max-w-[200px]"
@@ -174,6 +177,7 @@
 							</div>
 						</button>
 					</UserMenu>
+				{/if}
 				{/if}
 			</div>
 		</div>
