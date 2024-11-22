@@ -101,6 +101,23 @@
 
 		window.addEventListener('resize', onResize);
 
+		if ($page.route.id === "/start") {
+			initI18n();
+			if (!localStorage.locale) {
+				const languages = await getLanguages();
+				const browserLanguages = navigator.languages
+					? navigator.languages
+					: [navigator.language || navigator.userLanguage];
+				const lang = backendConfig.default_locale
+					? backendConfig.default_locale
+					: bestMatchingLanguage(languages, browserLanguages, 'en-US');
+				$i18n.changeLanguage(lang);
+			}
+			document.getElementById('splash-screen')?.remove();
+			loaded = true;
+			return;
+		}
+
 		let backendConfig = null;
 		try {
 			backendConfig = await getBackendConfig();
