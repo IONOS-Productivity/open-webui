@@ -72,7 +72,7 @@
 			<div class="sheet__footer sheet__footer--align-right">
 				<button
 					type="button"
-					class="button button--primary {feedbackProvided ? '' : 'button--disabled'}"
+					class="exos-button exos-button--primary {feedbackProvided ? '' : 'exos-button--disabled'}"
 					disabled={!feedbackProvided}
 					on:click={() => {
 						feedbackSent = true;
@@ -101,7 +101,7 @@
 				</div>
 				<div class="sheet__footer sheet__footer--align-right">
 					<Dialog.Close class="sheet__footer sheet__footer--align-right">
-						<button type="button" class="button button--primary">
+						<button type="button" class="exos-button exos-button--primary">
 							{$i18n.t('Close')}
 						</button>
 					</Dialog.Close>
@@ -119,7 +119,7 @@
 				</div>
 				<div class="sheet__footer sheet__footer--align-right">
 					<Dialog.Close class="sheet__footer sheet__footer--align-right">
-						<button type="button" class="button button--primary" on:click={resetFeedbackDialog}>
+						<button type="button" class="exos-button exos-button--primary" on:click={resetFeedbackDialog}>
 							{$i18n.t('Back')}
 						</button>
 					</Dialog.Close>
