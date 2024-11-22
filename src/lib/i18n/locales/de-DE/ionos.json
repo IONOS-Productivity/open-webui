@@ -1,4 +1,5 @@
 {
+	"Email address": "Email Adresse",
 	"Feedback": "Feedback",
 	"Feedback could not be sent": "Feedback konnte nicht gesendet werden",
 	"Feedback is being sent": "Feedback wird gesendet...",
@@ -7,7 +8,13 @@
 	"Privacy Policy": "Datenschutz",
 	"Terms and Conditions": "AGB",
 	"Pass on your impressions, suggestions etc. to us...": "Geben Sie Ihre Eindrücke, Anregungen etc. an uns weiter...",
+	"Saving email address": "E-Mail-Adresse wird gespeichert...",
+	"Something went wrong": "Etwas ist schief gelaufen",
+	"Stay informed": "Bleiben Sie informiert...",
 	"Thanks!": "Vielen Dank!",
+	"The e-mail address has been saved": "Die E-Mail-Adresse wurde gespeichert",
+	"We are still working on it and will keep you up to date when there is news. Just give us your email address": "Wir arbeiten weiterhin daran und halten Sie auf dem Laufenden, wenn es Neuigkeiten gibt. Geben Sie uns einfach Ihre Email Adresse",
 	"We have received your feedback": "Wir haben Ihr Feedback erhalten",
+	"Your e-mail address could not be saved": "Ihre E-Mail-Adresse konnte nicht gespeichert werden",
 	"Your feedback to us": "Ihr Feedback an uns"
 }
