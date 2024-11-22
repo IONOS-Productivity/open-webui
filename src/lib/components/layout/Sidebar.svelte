@@ -68,6 +68,7 @@
 	let folders = {};
 
 	const showUserMenu = false;
+	const showWorkspaceMenuItem = false;
 
 	const initFolders = async () => {
 		const folderList = await getFolders(localStorage.token).catch((error) => {
@@ -472,6 +473,7 @@
 			</button>
 		</div>
 
+		{#if showWorkspaceMenuItem}
 		{#if $user?.role === 'admin' || $user?.permissions?.workspace?.models || $user?.permissions?.workspace?.knowledge || $user?.permissions?.workspace?.prompts || $user?.permissions?.workspace?.tools}
 			<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
 				<a
@@ -509,6 +511,7 @@
 					</div>
 				</a>
 			</div>
+		{/if}
 		{/if}
 
 		<div class="relative {$temporaryChatEnabled ? 'opacity-20' : ''}">
