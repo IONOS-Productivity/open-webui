@@ -67,6 +67,8 @@
 
 	let folders = {};
 
+	const showUserMenu = false;
+
 	const initFolders = async () => {
 		const folderList = await getFolders(localStorage.token).catch((error) => {
 			toast.error(error);
@@ -772,6 +774,7 @@
 
 		<div class="px-2">
 			<div class="flex flex-col font-primary">
+				{#if showUserMenu}
 				{#if $user !== undefined}
 					<UserMenu
 						role={$user.role}
@@ -797,6 +800,7 @@
 							<div class=" self-center font-medium">{$user.name}</div>
 						</button>
 					</UserMenu>
+				{/if}
 				{/if}
 			</div>
 		</div>
