@@ -44,7 +44,7 @@
 			</Dialog.Trigger>
 		</Dialog.Root>
 		<Dialog.Root bind:open={dialogOpen}>
-			<Dialog.Trigger class="px-4 py-2 button button--secondary button--ellipsized">
+			<Dialog.Trigger class="px-4 py-2 exos-button exos-button--secondary exos-button--ellipsized">
 				{$i18n.t('Feedback', { ns: 'ionos' })}
 			</Dialog.Trigger>
 			<IonosFeedback {dialogOpen} />
