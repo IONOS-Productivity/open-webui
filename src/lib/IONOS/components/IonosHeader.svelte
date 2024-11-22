@@ -2,10 +2,12 @@
 	import { Dialog } from 'bits-ui';
 	import { getContext } from 'svelte';
 	import IonosFeedback from './IonosFeedback.svelte';
+	import IonosRegister from './IonosRegister.svelte';
 
 	const i18n = getContext('i18n');
 
-	let dialogOpen: boolean;
+	let feedbackDialogOpen: boolean;
+	let registerDialogOpen: boolean;
 </script>
 
 <header class="ionos-header">
@@ -38,16 +40,17 @@
 	</div>
 
 	<div class="header-right">
-		<Dialog.Root>
+		<Dialog.Root bind:open={registerDialogOpen}>
 			<Dialog.Trigger class="px-4 py-2 exos-button exos-button--primary exos-button--ellipsized"
 				>{$i18n.t('Sign up')}
 			</Dialog.Trigger>
+			<IonosRegister dialogOpen={registerDialogOpen} />
 		</Dialog.Root>
-		<Dialog.Root bind:open={dialogOpen}>
+		<Dialog.Root bind:open={feedbackDialogOpen}>
 			<Dialog.Trigger class="px-4 py-2 exos-button exos-button--secondary exos-button--ellipsized">
 				{$i18n.t('Feedback', { ns: 'ionos' })}
 			</Dialog.Trigger>
-			<IonosFeedback {dialogOpen} />
+			<IonosFeedback dialogOpen={feedbackDialogOpen} />
 		</Dialog.Root>
 	</div>
 </header>
