@@ -1,4 +1,4 @@
-import { PUBLIC_FEEDBACK_BASE_URL } from '$env/static/public';
+import {PUBLIC_FEEDBACK_BASE_URL} from '$env/static/public';
 
 let feedbackEndpoint: string = '/';
 if (PUBLIC_FEEDBACK_BASE_URL) {
@@ -21,6 +21,5 @@ export const postFeedback = async (comment: string, rating: number) => {
 		throw new Error('Failed to post feedback');
 	}
 
-	const data = await response.json();
-	return data;
+	return await response.json();
 };
