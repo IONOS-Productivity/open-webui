@@ -25,10 +25,8 @@
 		rating = 0;
 	}
 
-	let response: Promise<any>;
-
 	const sendFeedback = () => {
-		response = postFeedback(feedbackText, rating);
+		postFeedback(feedbackText, rating);
 	};
 </script>
 
