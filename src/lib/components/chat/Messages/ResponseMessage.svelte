@@ -5,6 +5,8 @@
 	import { createEventDispatcher } from 'svelte';
 	import { onMount, tick, getContext } from 'svelte';
 
+	import { feedbackHandler as ionosFeedbackHandler } from '$lib/IONOS/components/feedbackHandler';
+
 	const i18n = getContext<Writable<i18nType>>('i18n');
 
 	const dispatch = createEventDispatcher();
@@ -343,6 +345,9 @@
 	const feedbackHandler = async (rating: number | null = null, details: object | null = null) => {
 		feedbackLoading = true;
 		console.log('Feedback', rating, details);
+
+		ionosFeedbackHandler(rating, details);
+		return;
 
 		const updatedMessage = {
 			...message,
