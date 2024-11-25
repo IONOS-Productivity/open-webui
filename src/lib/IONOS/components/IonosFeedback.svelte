@@ -152,7 +152,7 @@
 	}
 
 	.star-rating button {
-		color: var(--ion-text-color);
+		color: var(--solid-corporate-background-color);
 		cursor: pointer;
 	}
 
