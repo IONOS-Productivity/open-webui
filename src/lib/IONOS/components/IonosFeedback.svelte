@@ -81,7 +81,20 @@
 
 		{#if feedbackSent}
 			{#await postFeedback(feedbackText, rating)}
-				<p>{$i18n.t('Feedback is being sent', { ns: 'ionos' })}</p>
+				<section class="exos-sheet__section">
+					<ul class="exos-stripe exos-stripe--align-center">
+						<li class="exos-stripe__item">
+							<div
+								class="exos-loading-spin exos-loading-spin--bright exos-loading-spin--small"
+							></div>
+						</li>
+						<li class="exos-stripe__item">
+							<p class="exos-paragraph exos-paragraph--cropped exos-paragraph--align-center">
+								{$i18n.t('Feedback is being sent', { ns: 'ionos' })}
+							</p>
+						</li>
+					</ul>
+				</section>
 			{:then}
 				<Dialog.Title>
 					<h1 class="exos-card__headline">{$i18n.t('Thanks!', { ns: 'ionos' })}</h1>
@@ -104,7 +117,7 @@
 			{:catch}
 				<Dialog.Title>
 					<h1 class="exos-card__headline">
-						{$i18n.t('Das hat nicht funktioniert', { ns: 'ionos' })}
+						{$i18n.t('Something went wrong', { ns: 'ionos' })}
 					</h1>
 				</Dialog.Title>
 				<div class="exos-message exos-message--critical">
