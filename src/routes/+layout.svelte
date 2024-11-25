@@ -33,7 +33,7 @@
 	import { WEBUI_BASE_URL, WEBUI_HOSTNAME } from '$lib/constants';
 	import i18n, { initI18n, getLanguages } from '$lib/i18n';
 	import { bestMatchingLanguage } from '$lib/utils';
-	import IonosFooter from "$lib/IONOS/components/IonosFooter.svelte";
+	import IonosFooter from '$lib/IONOS/components/IonosFooter.svelte';
 	import IonosHeader from '$lib/IONOS/components/IonosHeader.svelte';
 
 	setContext('i18n', i18n);
@@ -212,7 +212,7 @@
 {#if loaded}
 	<slot />
 {/if}
-<IonosFooter/>
+<IonosFooter />
 
 <Toaster
 	theme={$theme.includes('dark')

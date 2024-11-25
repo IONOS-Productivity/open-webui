@@ -1,16 +1,11 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import {
-		showSidebar,
-	} from '$lib/stores';
+	import { showSidebar } from '$lib/stores';
 	const currentYear = new Date().getFullYear();
 	const i18n = getContext('i18n');
 </script>
 
-<footer class="{$showSidebar
-			? 'md:max-w-[calc(100%-260px)]'
-			: ''}">
-
+<footer class={$showSidebar ? 'md:max-w-[calc(100%-260px)]' : ''}>
 	<div class="footer-right">
 		<span id="powered_by">{$i18n.t('powered by IONOS Model Hub', { ns: 'ionos' })}</span>
 	</div>
@@ -18,13 +13,25 @@
 		<p>© {currentYear} IONOS SE</p>
 	</div>
 	<div class="footer-left">
-		<a href="{$i18n.t('https://www.ionos.de/impressum', { ns: 'ionos' })}" target="_blank" class="exos-link">
+		<a
+			href={$i18n.t('https://www.ionos.de/impressum', { ns: 'ionos' })}
+			target="_blank"
+			class="exos-link"
+		>
 			{$i18n.t('Imprint', { ns: 'ionos' })}
 		</a>
-		<a href="{$i18n.t('https://www.ionos.de/terms-gtc/terms-privacy', { ns: 'ionos' })}" target="_blank" class="exos-link">
+		<a
+			href={$i18n.t('https://www.ionos.de/terms-gtc/terms-privacy', { ns: 'ionos' })}
+			target="_blank"
+			class="exos-link"
+		>
 			{$i18n.t('Privacy Policy', { ns: 'ionos' })}
 		</a>
-		<a href="{$i18n.t('https://www.ionos.de/terms-gtc/terms', { ns: 'ionos' })}" target="_blank" class="exos-link">
+		<a
+			href={$i18n.t('https://www.ionos.de/terms-gtc/terms', { ns: 'ionos' })}
+			target="_blank"
+			class="exos-link"
+		>
 			{$i18n.t('Terms and Conditions', { ns: 'ionos' })}
 		</a>
 	</div>
