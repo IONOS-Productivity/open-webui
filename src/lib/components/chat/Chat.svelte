@@ -552,8 +552,9 @@
 			showControls.set(true);
 		}
 
-		if ($page.url.searchParams.get('q')) {
-			prompt = $page.url.searchParams.get('q') ?? '';
+		if (sessionStorage.ionosGptDemoPrompt) {
+			prompt = sessionStorage.ionosGptDemoPrompt ?? '';
+			sessionStorage.removeItem('ionosGptDemoPrompt');
 
 			if (prompt) {
 				await tick();
