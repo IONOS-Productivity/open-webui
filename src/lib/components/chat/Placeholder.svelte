@@ -38,7 +38,7 @@
 
 	let models = [];
 
-	const showModelIconAndName = false;
+	const showModelIconAndName = true;
 
 	const selectSuggestionPrompt = async (p) => {
 		let text = p;
