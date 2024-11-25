@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
 	import { showSidebar } from '$lib/stores';
+	import { Dialog } from 'bits-ui';
+	import IonosHelp from './IonosHelp.svelte';
+
 	const currentYear = new Date().getFullYear();
 	const i18n = getContext('i18n');
 </script>
@@ -34,6 +37,11 @@
 		>
 			{$i18n.t('Terms and Conditions', { ns: 'ionos' })}
 		</a>
+		<Dialog.Root>
+			<Dialog.Trigger class="exos-exos-icon exos-exos-icon-dialogmessage-32 scale-150 text-[var(--ion-brand-color)]"
+			></Dialog.Trigger>
+			<IonosHelp />
+		</Dialog.Root>
 	</div>
 </footer>
 
@@ -61,7 +69,6 @@
 		display: flex;
 		align-items: center;
 		gap: 16px;
-		margin-right: 16px;
 	}
 
 	#copyright {
