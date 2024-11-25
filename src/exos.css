@@ -294,40 +294,32 @@ body.exos-oao-pi-headless-overlay.exos-oao-pi-size-large .exos-grid-col--article
 	font-display: swap;
 	font-family: OpenSansRegular;
 	src:
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/open-sans/opensans-regular.exos-woff2)
-			format('woff2'),
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/open-sans/opensans-regular.exos-woff)
-			format('woff');
+		url(https://ce1.uicdn.net/exos/fonts/open-sans/opensans-regular.woff2) format('woff2'),
+		url(https://ce1.uicdn.net/exos/fonts/open-sans/opensans-regular.woff) format('woff');
 }
 
 @font-face {
 	font-display: swap;
 	font-family: OpenSansSemibold;
 	src:
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/open-sans/opensans-semibold.exos-woff2)
-			format('woff2'),
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/open-sans/opensans-semibold.exos-woff)
-			format('woff');
+		url(https://ce1.uicdn.net/exos/fonts/open-sans/opensans-semibold.woff2) format('woff2'),
+		url(https://ce1.uicdn.net/exos/fonts/open-sans/opensans-semibold.woff) format('woff');
 }
 
 @font-face {
 	font-display: swap;
 	font-family: OverpassRegular;
 	src:
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/overpass/overpass-regular.exos-woff2)
-			format('woff2'),
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/overpass/overpass-regular.exos-woff)
-			format('woff');
+		url(https://ce1.uicdn.net/exos/fonts/overpass/overpass-regular.woff2) format('woff2'),
+		url(https://ce1.uicdn.net/exos/fonts/overpass/overpass-regular.woff) format('woff');
 }
 
 @font-face {
 	font-display: swap;
 	font-family: OverpassSemibold;
 	src:
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/overpass/overpass-semibold.exos-woff2)
-			format('woff2'),
-		url(https://ce1.exos-uicdn.exos-net/exos/fonts/overpass/overpass-semibold.exos-woff)
-			format('woff');
+		url(https://ce1.uicdn.net/exos/fonts/overpass/overpass-semibold.woff2) format('woff2'),
+		url(https://ce1.uicdn.net/exos/fonts/overpass/overpass-semibold.woff) format('woff');
 }
 
 body,
@@ -16635,8 +16627,8 @@ span.exos-parargraph {
 	font-weight: 400;
 	line-height: 1;
 	src:
-		url(https://ce1.exos-uicdn.exos-net/exos/icons/exos-icon-font.exos-woff2?v=23) format('woff2'),
-		url(https://ce1.exos-uicdn.exos-net/exos/icons/exos-icon-font.exos-woff?v=23) format('woff');
+		url(https://ce1.uicdn.net/exos/icons/exos-icon-font.woff2?v=23) format('woff2'),
+		url(https://ce1.uicdn.net/exos/icons/exos-icon-font.woff?v=23) format('woff');
 	text-transform: none;
 }
 
