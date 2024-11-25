@@ -28,7 +28,7 @@
 		<Dialog.Close class="exos-sheet__close"></Dialog.Close>
 		{#if !registrationSent}
 			<Dialog.Title>
-				<h1 class="exos-card__headline">{$i18n.t('Bleiben Sie informiert...', { ns: 'ionos' })}</h1>
+				<h1 class="exos-card__headline">{$i18n.t('Stay informed', { ns: 'ionos' })}</h1>
 			</Dialog.Title>
 			<Dialog.Description class="exos-paragraph">
 				<p>
