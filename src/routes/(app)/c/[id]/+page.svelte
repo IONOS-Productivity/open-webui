@@ -5,5 +5,4 @@
 	import Help from '$lib/components/layout/Help.svelte';
 </script>
 
-<Help />
 <Chat chatIdProp={$page.params.id} />
