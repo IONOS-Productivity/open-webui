@@ -2,7 +2,7 @@
 	import Star from '$lib/components/icons/Star.svelte';
 	import { Dialog } from 'bits-ui';
 	import { getContext } from 'svelte';
-	import { postFeedback } from '$lib/IONOS/components/feedback';
+	import { postFeedback } from '$lib/IONOS/api/feedbackBackend';
 
 	const i18n = getContext('i18n');
 
