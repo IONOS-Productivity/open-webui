@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Dialog } from 'bits-ui';
 	import { getContext } from 'svelte';
-
+	import { postRegistration } from '$lib/IONOS/api/feedbackBackend';
 	const i18n = getContext('i18n');
 
 	export let dialogOpen = false;
@@ -12,11 +12,6 @@
 	$: registrationSent = false;
 
 	$: if (!dialogOpen) resetFeedbackDialog();
-
-	async function sendRegistration() {
-		registrationSent = true;
-		await new Promise((resolve) => setTimeout(resolve, 2000));
-	}
 
 	function resetFeedbackDialog() {
 		registrationSent = false;
@@ -68,7 +63,7 @@
 				</button>
 			</div>
 		{:else}
-			{#await sendRegistration()}
+			{#await postRegistration(mailInput)}
 				<section class="exos-sheet__section">
 					<ul class="exos-stripe exos-stripe--align-center">
 						<li class="exos-stripe__item">
