@@ -31,6 +31,7 @@ RUN npm ci
 
 COPY . .
 ENV APP_BUILD_HASH=${BUILD_HASH}
+RUN echo "PUBLIC_FEEDBACK_BASE_URL=" > .env; echo "PUBLIC_DEV_SIGNIN_SIGNON=false" >> .env
 RUN npm run build
 
 ######## WebUI backend ########
