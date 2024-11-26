@@ -31,6 +31,9 @@ RUN npm ci
 
 COPY . .
 ENV APP_BUILD_HASH=${BUILD_HASH}
+# Necessary on some systems, maybe only for Podman otherwise the build fails with
+# FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ENV NODE_OPTIONS=--max-old-space-size=3100
 RUN echo "PUBLIC_FEEDBACK_BASE_URL=" > .env; echo "PUBLIC_DEV_SIGNIN_SIGNON=false" >> .env
 RUN npm run build
 
