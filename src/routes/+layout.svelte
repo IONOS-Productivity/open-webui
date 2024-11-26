@@ -38,8 +38,6 @@
 	import IonosFooter from '$lib/IONOS/components/IonosFooter.svelte';
 	import IonosHeader from '$lib/IONOS/components/IonosHeader.svelte';
 
-	const signonAndSigninEnabled = PUBLIC_DEV_SIGNIN_SIGNON.toLowerCase() === "true";
-
 	setContext('i18n', i18n);
 
 	let loaded = false;
@@ -184,7 +182,7 @@
 						redirectToLandingPage();
 					}
 				} else {
-					if ($page.route.id !== '/auth' || !signonAndSigninEnabled) {
+					if ($page.route.id !== '/auth') {
 						redirectToLandingPage();
 					}
 				}

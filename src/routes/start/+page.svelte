@@ -38,7 +38,7 @@ function submit(promptToStart: string, modelNameForStart: string) {
 	sessionStorage.selectedModels = JSON.stringify([modelNameForStart]);
 	sessionStorage.ionosGptDemoPrompt = promptToStart;
 
-	window.location = `/`;
+	window.location = `/auth`;
 }
 </script>
 
