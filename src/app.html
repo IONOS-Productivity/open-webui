@@ -28,6 +28,9 @@
 		<script>
 			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
 			(() => {
+				// force exos theme
+				localStorage.theme = 'exos';
+
 				const metaThemeColorTag = document.querySelector('meta[name="theme-color"]');
 				const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -52,12 +55,18 @@
 					document.documentElement.classList.add('dark');
 					document.documentElement.classList.add('her');
 					metaThemeColorTag.setAttribute('content', '#983724');
+				} else if (localStorage.theme === 'exos') {
+					// disable else logic
 				} else {
 					document.documentElement.classList.add('dark');
 					metaThemeColorTag.setAttribute('content', '#171717');
 				}
 
 				window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+					if (localStorage.theme === 'exos') {
+						// no dark mode for exos
+						return;
+					}
 					if (localStorage.theme === 'system') {
 						if (e.matches) {
 							document.documentElement.classList.add('dark');

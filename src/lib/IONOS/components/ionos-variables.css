@@ -331,12 +331,13 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--ion-background-color: #0d0d0d;
-		--ion-brand-color: #f4f7fa;
-		--secondary-button-border-color: #f4f7fa;
-		--secondary-button-background-color: #fff;
-		--ion-text-color: var(--primary-text-color-inverted);
-		--powered-by-text-color: var(--primary-text-color-inverted);
+		/* disable dark mode values for now */
+		/*--ion-background-color: #0d0d0d;*/
+		/*--ion-brand-color: #f4f7fa;*/
+		/*--secondary-button-border-color: #f4f7fa;*/
+		/*--secondary-button-background-color: #fff;*/
+		/*--ion-text-color: var(--primary-text-color-inverted);*/
+		/*--powered-by-text-color: var(--primary-text-color-inverted);*/
 	}
 }
 
@@ -347,4 +348,14 @@
 		--ion-text-color: var(--primary-text-color);
 		--powered-by-text-color: var(--primary-text-color);
 	}
+}
+
+/**
+ * override prefers-color-scheme dependent values for now
+ */
+:root {
+	--ion-background-color: #f9f9f9;
+	--ion-brand-color: var(--palette-corporate-6);
+	--ion-text-color: var(--primary-text-color);
+	--powered-by-text-color: var(--primary-text-color);
 }
