@@ -43,10 +43,46 @@ function submit(promptToStart: string, modelNameForStart: string) {
 	window.location = `/auth`;
 }
 
+function typePrompt(text, onDone: null) {
+	let cancelled = false;
+	let chars = text.split('');
+
+	prompt = '';
+
+	const animate = () => {
+		if (cancelled) {
+			console.log("# Cancel");
+			prompt = '';
+			return;
+		}
+
+		if (chars.length === 0) {
+			if (typeof onDone === "function") {
+				onDone();
+			}
+
+			return;
+		} else {
+			requestAnimationFrame(animate);
+		}
+
+		const char = chars[0];
+		chars = chars.slice(1);
+
+		prompt += char;
+	}
+
+	requestAnimationFrame(animate);
+
+	return () => { cancelled = true };
+}
+
+let cancelTyping = () => { };
+
 function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedModel } }) {
-	prompt = selectedPrompt;
 	model = selectedModel;
-	promptTextarea.focus();
+	cancelTyping();
+	cancelTyping = typePrompt(selectedPrompt, () => promptTextarea.focus());
 }
 </script>
 
