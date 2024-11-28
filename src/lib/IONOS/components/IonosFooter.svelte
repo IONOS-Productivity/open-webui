@@ -72,6 +72,13 @@
 		gap: 16px;
 	}
 
+	footer .exos-link {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+
 	#copyright {
 		color: var(--ion-text-color);
 		position: absolute;
