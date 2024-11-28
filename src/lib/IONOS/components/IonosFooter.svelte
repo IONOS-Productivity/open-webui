@@ -85,4 +85,14 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+
+	@media (max-width: 640px) {
+		#powered_by {
+			display: none;
+		}
+
+		#copyright {
+			display: none;
+		}
+	}
 </style>
