@@ -1,9 +1,6 @@
-import { PUBLIC_FEEDBACK_BASE_URL } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 
-let feedbackServiceUrl = '';
-if (PUBLIC_FEEDBACK_BASE_URL) {
-	feedbackServiceUrl = PUBLIC_FEEDBACK_BASE_URL;
-}
+const feedbackServiceUrl = env.PUBLIC_FEEDBACK_BASE_URL || '';
 
 export const postFeedback = async (comment: string, rating: number) => {
 	const response = await fetch(`${feedbackServiceUrl}/feedback`, {
