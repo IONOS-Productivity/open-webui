@@ -15,7 +15,7 @@
 			name="model"
 			type="radio"
 			on:click={() => {
-				dispatch('select', { prompt: prompt.content, model: prompt.model });
+				dispatch('select', { prompt: prompt.content, model: prompt.model, modelName: prompt.modelName });
 			}}
 		/>
 		<label for={"model-" + promptIdx} class="flex flex-col items-center h-full content px-3 py-2 rounded-xl bg-transparent border-2 border-gray-200 hover:bg-black/5 hover:text-ionos dark:hover:bg-white/5 transition">
