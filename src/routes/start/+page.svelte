@@ -28,9 +28,12 @@ const i18n = getContext('i18n');
 
 // If the user did not pick a default model
 const defaultModel = 'meta-llama/Meta-Llama-3.1-8B-Instruct';
+// Display name
+const defaultModelName = 'IONOS Text model';
 
 let prompt = '';
 let model = defaultModel;
+let modelName = defaultModelName;
 
 let promptTextarea;
 
@@ -79,8 +82,9 @@ function typePrompt(text, onDone: null) {
 
 let cancelTyping = () => { };
 
-function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedModel } }) {
+function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedModel, modelName: selectedModelName } }) {
 	model = selectedModel;
+	modelName = selectedModelName;
 	cancelTyping();
 	cancelTyping = typePrompt(selectedPrompt, () => promptTextarea.focus());
 }
@@ -95,7 +99,7 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 		/>
 	</div>
 
-	<p>{$i18n.t('Using {{model}}', { ns: "ionos", model })}</p>
+	<p>{$i18n.t('Using {{modelName}}', { ns: "ionos", modelName })}</p>
 
 	<form
 		on:submit|preventDefault={(e) => submit(prompt, model)}
