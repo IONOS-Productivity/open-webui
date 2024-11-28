@@ -26,14 +26,9 @@ import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 const i18n = getContext('i18n');
 
-// If the user did not pick a default model
-const defaultModel = 'meta-llama/Meta-Llama-3.1-8B-Instruct';
-// Display name
-const defaultModelName = 'IONOS Text model';
-
 let prompt = '';
-let model = defaultModel;
-let modelName = defaultModelName;
+let model = null;
+let modelName = null;
 
 let promptTextarea;
 
@@ -99,7 +94,9 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 		/>
 	</div>
 
-	<p>{$i18n.t('Using {{modelName}}', { ns: "ionos", modelName })}</p>
+	<p class={model === null ? 'invisible' : ''}>
+		{$i18n.t('Using {{modelName}}', { ns: "ionos", modelName })}
+	</p>
 
 	<form
 		on:submit|preventDefault={(e) => submit(prompt, model)}
@@ -109,13 +106,18 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 		<Textarea
 			bind:this={promptTextarea}
 			bind:value={prompt}
+			disabled={model === null}
 			placeholder={$i18n.t('Send a message to IONOS GPT', { ns: "ionos" })}
 			className="w-full rounded-lg p-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none h-full bg-transparent"
 		/>
 
 
-		<button type="submit" class="p-0 mx-2 flex w-8">
-			<PaperPlane className="fill-gray-400 cursor-pointer hover:fill-ionos" />
+		<button
+			disabled={model === null}
+			type="submit"
+			class="p-0 mx-2 flex w-8 group/button"
+		>
+			<PaperPlane className="fill-gray-400 group-disabled/button:fill-gray-400 cursor-pointer group-disabled/button:cursor-default hover:fill-ionos" />
 		</button>
 	</form>
 
