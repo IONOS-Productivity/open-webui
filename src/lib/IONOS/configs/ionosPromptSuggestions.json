@@ -3,54 +3,55 @@
     "description": "Text zusammenfassen",
     "detail": "Gebe der AI längere Texte und lass dir diese schnell zusammenfassen.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Fasse mir einen Text zusammen."
   },
   {
     "description": "Texte überarbeiten",
     "detail": "Verbessere deine Texte durch unseren AI Lektor.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Verbessere meinen Text, um ihn professioneller klingen zu lassen."
   },
   {
     "description": "in neue Themen eintauchen",
     "detail": "Bekomme einen Überblick über neue Themen, indem du dir Sie von unserer AI erklären lässt.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Helfe mir ein Thema besser zu verstehen."
   },
   {
     "description": "Ideen sammeln",
     "detail": "Erzeuge vielseitige Ideen zu einem Thema deiner Wahl.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Helfe mir dabei Ideen zu sammeln."
   },
   {
     "description": "Programmieren",
     "detail": "Nutze die AI um dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Hilf mir dabei Code zu schreiben."
   },
   {
     "description": "einen Plan erstellen",
     "detail": "Gebe der AI Eckpunkte und lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    "modelName": "Llama 3.1 70B Instruct",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "modelName": "AI Texter",
     "content": "Erstelle mir einen Plan."
   },
   {
     "description": "einen Firmentext schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel, Social Media Posts oder Content für deine Webseite schreiben zu lassen.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
     "modelName": "AI Texter",
     "content": "Hilf mir einen Firmentext zu verfassen."
   },
@@ -58,6 +59,7 @@
     "description": "etwas in seinem Style schreiben lassen",
     "detail": "Stelle unserem AI Texter Beispieltexte zur Verfügung um Texte in deinem spezifischen Firmenstil erstellen zu lassen.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
     "modelName": "AI Texter",
     "content": "Schreibe einen Text und orientiere dich dabei am Schreibstil meines Beispieltextes."
   },
@@ -65,6 +67,7 @@
     "description": "einen Blogartikel schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel für deine Firmenplattform zu schreiben.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
     "modelName": "AI Texter",
     "content": "Schreibe einen Blogartikel für meine Firmenwebseite."
   },
@@ -72,6 +75,7 @@
     "description": "einen Social Media Post schreiben",
     "detail": "Nutze unseren AI Texter, um Social Media Posts für deinen Firmenaccount zu schreiben.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
     "modelName": "AI Texter",
     "content": "Schreibe einen Social Media Post für mein LinkedIn Profil."
   },
@@ -79,6 +83,7 @@
     "description": "ein Bild erstellen",
     "detail": "Nutze unseren leistungstarken Bildgenerator, um visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation zu erstellen.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
     "modelName": "Image Generator",
     "content": "Fotorealistisches Bild einer Katze auf dem Sofa, high quality"
   }
