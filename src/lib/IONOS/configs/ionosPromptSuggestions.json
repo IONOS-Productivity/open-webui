@@ -35,8 +35,8 @@
     "description": "Programmieren",
     "detail": "Nutze die AI um dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
     "iconUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM2Mi43IDE5LjNMMzE0LjMgNjcuNyA0NDQuMyAxOTcuN2w0OC40LTQ4LjRjMjUtMjUgMjUtNjUuNSAwLTkwLjVMNDUzLjMgMTkuM2MtMjUtMjUtNjUuNS0yNS05MC41IDB6bS03MSA3MUw1OC42IDMyMy41Yy0xMC40IDEwLjQtMTggMjMuMy0yMi4yIDM3LjRMMSA0ODEuMkMtMS41IDQ4OS43IC44IDQ5OC44IDcgNTA1czE1LjMgOC41IDIzLjcgNi4xbDEyMC4zLTM1LjRjMTQuMS00LjIgMjctMTEuOCAzNy40LTIyLjJMNDIxLjcgMjIwLjMgMjkxLjcgOTAuM3oiLz48L3N2Zz4K",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "model": "meta-llama/CodeLlama-13b-Instruct-hf",
+    "modelName": "AI Coder",
     "content": "Hilf mir dabei Code zu schreiben."
   },
   {
