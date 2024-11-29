@@ -11,6 +11,8 @@
 	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL } from '$lib/constants';
 	import { WEBUI_NAME, config, user, socket } from '$lib/stores';
 
+	import socketInit from '../socketInit.ts';
+
 	import { generateInitialsImage, canvasPixelTest } from '$lib/utils';
 
 	import Spinner from '$lib/components/common/Spinner.svelte';
@@ -35,7 +37,6 @@
 			if (sessionUser.token) {
 				localStorage.token = sessionUser.token;
 			}
-
 			$socket.emit('user-join', { auth: { token: sessionUser.token } });
 			await user.set(sessionUser);
 			await config.set(await getBackendConfig());
@@ -44,6 +45,8 @@
 	};
 
 	const signInHandler = async () => {
+		socketInit();
+
 		const sessionUser = await userSignIn(email, password).catch((error) => {
 			toast.error(error);
 			return null;

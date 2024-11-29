@@ -1,5 +1,4 @@
 <script>
-	import { io } from 'socket.io-client';
 	import { spring } from 'svelte/motion';
 
 	let loadingProgress = spring(0, {
@@ -13,9 +12,7 @@
 		theme,
 		WEBUI_NAME,
 		mobile,
-		socket,
 		activeUserCount,
-		USAGE_POOL
 	} from '$lib/stores';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
@@ -36,6 +33,8 @@
 	import IonosFooter from '$lib/IONOS/components/IonosFooter.svelte';
 	import IonosHeader from '$lib/IONOS/components/IonosHeader.svelte';
 
+	import socketInit from './socketInit.ts';
+
 	setContext('i18n', i18n);
 
 	let loaded = false;
@@ -54,52 +53,6 @@
 			? backendConfig.default_locale
 			: bestMatchingLanguage(languages, browserLanguages, 'en-US');
 		$i18n.changeLanguage(lang);
-	};
-
-	const setupSocket = () => {
-		const _socket = io(`${WEBUI_BASE_URL}` || undefined, {
-			reconnection: true,
-			reconnectionDelay: 1000,
-			reconnectionDelayMax: 5000,
-			randomizationFactor: 0.5,
-			path: '/ws/socket.io',
-			auth: { token: localStorage.token }
-		});
-
-		socket.set(_socket);
-
-		_socket.on('connect_error', (err) => {
-			console.log('connect_error', err);
-		});
-
-		_socket.on('connect', () => {
-			console.log('connected', _socket.id);
-		});
-
-		_socket.on('reconnect_attempt', (attempt) => {
-			console.log('reconnect_attempt', attempt);
-		});
-
-		_socket.on('reconnect_failed', () => {
-			console.log('reconnect_failed');
-		});
-
-		_socket.on('disconnect', (reason, details) => {
-			console.log(`Socket ${_socket.id} disconnected due to ${reason}`);
-			if (details) {
-				console.log('Additional details:', details);
-			}
-		});
-
-		_socket.on('user-count', (data) => {
-			console.log('user-count', data);
-			activeUserCount.set(data.count);
-		});
-
-		_socket.on('usage', (data) => {
-			console.log('usage', data);
-			USAGE_POOL.set(data['models']);
-		});
 	};
 
 	/**
@@ -168,7 +121,7 @@
 					const sessionUser = await getSessionUser(localStorage.token).catch((error) => null);
 
 					if (sessionUser) {
-						setupSocket();
+						socketInit();
 
 						// Save Session User to Store
 						await user.set(sessionUser);
