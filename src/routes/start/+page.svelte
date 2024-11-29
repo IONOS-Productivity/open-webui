@@ -88,6 +88,8 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 <div class="overflow-auto w-full h-full flex flex-col items-center">
 	<Greeting />
 
+	<h1 class="my-2 text-center text-2xl mb-0 mt-5">{$i18n.t('AI Quick Start.', { ns: "ionos" })}</h1>
+
 	<div class="w-3/5 py-5">
 		<Suggestions
 			on:select={selectSuggestion}
