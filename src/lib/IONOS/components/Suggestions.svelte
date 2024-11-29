@@ -20,7 +20,7 @@
 		/>
 		<label for={"model-" + promptIdx} class="flex flex-col items-center h-full content px-3 py-2 rounded-xl bg-transparent border-2 border-gray-200 hover:bg-black/5 hover:text-ionos dark:hover:bg-white/5 transition">
 			<div class="flex-1 text-center text-base">{prompt.description}</div>
-			<div class="flex-1 text-center text-sm mt-2">{prompt.detail}</div>
+			<div class="flex-1 text-center text-xs mt-2">{prompt.detail}</div>
 			<div class="image shrink-1 w-10 h-10 m-4 masked bg-gray-700" style={`mask-image: url(${prompt.iconUrl})`} />
 		</label>
 	</div>
