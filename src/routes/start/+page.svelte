@@ -26,6 +26,8 @@ import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 const i18n = getContext('i18n');
 
+const pauseBeforeSubmit = 1000; // ms
+
 let prompt = '';
 let model = null;
 let modelName = null;
@@ -81,7 +83,9 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 	model = selectedModel;
 	modelName = selectedModelName;
 	cancelTyping();
-	cancelTyping = typePrompt(selectedPrompt, () => promptTextarea.focus());
+	cancelTyping = typePrompt(selectedPrompt, () => {
+		setTimeout(() => submit(prompt, model), pauseBeforeSubmit);
+	});
 }
 </script>
 
