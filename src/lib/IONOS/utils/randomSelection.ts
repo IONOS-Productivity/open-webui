@@ -7,7 +7,7 @@ export default (array: Array<any>, maxPicks: number): Array<any> => {
 	let pickedIndexes = { };
 	let result = [];
 
-	for (let index = 0, counter = 0; counter < maxPicks;) {
+	for (let index = 0, counter = 0; counter < Math.min(array.length, maxPicks);) {
 		index = Math.floor(Math.random() * array.length);
 
 		if (index in pickedIndexes) {
