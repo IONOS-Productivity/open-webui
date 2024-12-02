@@ -20,16 +20,19 @@ import { config } from '$lib/stores';
 
 import Greeting from '$lib/components/chat/Greeting.svelte';
 import Suggestions from '$lib/IONOS/components/Suggestions.svelte';
+import ModelSelector from '$lib/IONOS/components/ModelSelector.svelte';
 import PaperPlane from '$lib/components/icons/PaperPlane.svelte';
 import Textarea from '$lib/components/common/Textarea.svelte';
 import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 const i18n = getContext('i18n');
 
+const defautModel = "meta-llama/Meta-Llama-3.1-70B-Instruct";
+
 const pauseBeforeSubmit = 1000; // ms
 
 let prompt = '';
-let model = null;
+let model = defautModel;
 let modelName = null;
 
 let promptTextarea;
@@ -80,7 +83,6 @@ function typePrompt(text, onDone: null) {
 let cancelTyping = () => { };
 
 function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedModel, modelName: selectedModelName } }) {
-	model = selectedModel;
 	modelName = selectedModelName;
 	cancelTyping();
 	cancelTyping = typePrompt(selectedPrompt, () => {
@@ -92,17 +94,18 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 <div class="overflow-auto w-full h-full flex flex-col items-center">
 	<Greeting />
 
+	<ModelSelector
+		bind:model={model}
+	/>
+
 	<h1 class="my-2 text-center text-xl mb-0 mt-5">{$i18n.t('AI Quick Start.', { ns: "ionos" })}</h1>
 
 	<div class="w-3/5 py-5">
 		<Suggestions
+			model={model}
 			on:select={selectSuggestion}
 		/>
 	</div>
-
-	<p class={model === null ? 'invisible' : ''}>
-		{$i18n.t('Using {{modelName}}', { ns: "ionos", modelName })}
-	</p>
 
 	<form
 		on:submit|preventDefault={(e) => submit(prompt, model)}

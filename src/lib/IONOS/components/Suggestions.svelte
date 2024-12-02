@@ -7,9 +7,12 @@
 
 	const maxSuggestionsToDisplay = 3;
 
-	$: promptSelection = randomSelection(prompts, maxSuggestionsToDisplay)
-
+	// Filter for model
+	export let model;
 	export let className = '';
+
+	$: suggestionsPerModel = prompts.filter(({ model: currentModel }) => model === currentModel);
+	$: promptSelection = randomSelection(suggestionsPerModel, maxSuggestionsToDisplay)
 </script>
 
 <div class="flex flex-wrap md:flex-row md:flex-wrap justify-center {className}">
