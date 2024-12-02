@@ -1,14 +1,19 @@
 <script lang="ts">
 	import { getContext, createEventDispatcher } from 'svelte';
 	import prompts from '$lib/IONOS/configs/ionosPromptSuggestions.json'
+	import randomSelection from '$lib/IONOS/utils/randomSelection.ts'
 
 	const dispatch = createEventDispatcher();
+
+	const maxSuggestionsToDisplay = 3;
+
+	$: promptSelection = randomSelection(prompts, maxSuggestionsToDisplay)
 
 	export let className = '';
 </script>
 
 <div class="flex flex-wrap justify-center {className}">
-	{#each prompts as prompt, promptIdx}
+	{#each promptSelection as prompt, promptIdx}
 	<div class="m-1 flex flex-col flex-wrap shrink-0 basis-52 h-50">
 		<input
 			id={"model-" + promptIdx}
