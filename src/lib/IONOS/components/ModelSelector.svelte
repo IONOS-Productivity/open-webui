@@ -6,6 +6,7 @@
 
 	export let className = '';
 	export let model = null;
+	export let modelName = null;
 
 	const models = getModels();
 
@@ -14,8 +15,7 @@
 		return map;
 	}, new Map());
 
-	let selectedModelName;
-	$: selectedModelName = modelNameByModel.get(model);
+	$: modelName = modelNameByModel.get(model);
 </script>
 
 <form class="flex flex-row justify-center {className}">
@@ -35,7 +35,7 @@
 	{/each}
 </form>
 
-<p>{selectedModelName}</p>
+<p>{modelName}</p>
 
 <style>
 input {
