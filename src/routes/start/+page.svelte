@@ -83,7 +83,6 @@ function typePrompt(text, onDone: null) {
 let cancelTyping = () => { };
 
 function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedModel, modelName: selectedModelName } }) {
-	modelName = selectedModelName;
 	cancelTyping();
 	cancelTyping = typePrompt(selectedPrompt, () => {
 		setTimeout(() => submit(prompt, model), pauseBeforeSubmit);
@@ -96,6 +95,7 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 
 	<ModelSelector
 		bind:model={model}
+		bind:modelName={modelName}
 	/>
 
 	<h1 class="my-2 text-center text-xl mb-0 mt-5">{$i18n.t('AI Quick Start.', { ns: "ionos" })}</h1>
