@@ -93,19 +93,12 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 <div class="overflow-auto w-full h-full flex flex-col items-center">
 	<Greeting />
 
+	<h1 class="my-2 text-center text-lg mb-5 mt-5">{$i18n.t('Choose the AI assistant that suits you.', { ns: "ionos" })}</h1>
+
 	<ModelSelector
 		bind:model={model}
 		bind:modelName={modelName}
 	/>
-
-	<h1 class="my-2 text-center text-xl mb-0 mt-5">{$i18n.t('AI Quick Start.', { ns: "ionos" })}</h1>
-
-	<div class="w-3/5 py-5">
-		<Suggestions
-			model={model}
-			on:select={selectSuggestion}
-		/>
-	</div>
 
 	<form
 		on:submit|preventDefault={(e) => submit(prompt, model)}
@@ -116,7 +109,7 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 			bind:this={promptTextarea}
 			bind:value={prompt}
 			disabled={model === null}
-			placeholder={$i18n.t('Send a message to IONOS GPT', { ns: "ionos" })}
+			placeholder={$i18n.t('Send a message to {{modelName}}', { ns: "ionos", modelName })}
 			className="w-full rounded-lg p-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none h-full bg-transparent"
 		/>
 
@@ -129,6 +122,15 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 			<PaperPlane className="fill-gray-400 group-disabled/button:fill-gray-400 cursor-pointer group-disabled/button:cursor-default hover:fill-ionos" />
 		</button>
 	</form>
+
+	<h1 class="my-2 text-center text-lg mb-0 mt-5">{$i18n.t('... or let yourself inspire by these examples how our assistants can support your work', { ns: "ionos" })}</h1>
+
+	<div class="w-3/5 py-5">
+		<Suggestions
+			model={model}
+			on:select={selectSuggestion}
+		/>
+	</div>
 
 
 	<Trailer />
