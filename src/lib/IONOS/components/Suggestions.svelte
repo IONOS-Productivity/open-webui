@@ -12,9 +12,9 @@
 	export let className = '';
 </script>
 
-<div class="flex flex-wrap justify-center {className}">
+<div class="flex flex-wrap md:flex-row md:flex-wrap justify-center {className}">
 	{#each promptSelection as prompt, promptIdx}
-	<div class="m-1 flex flex-col flex-wrap shrink-0 basis-52 h-50">
+	<div class="m-1 flex flex-col md:flex-wrap shrink-0 md:basis-52 h-50 w-full md:w-auto">
 		<input
 			id={"model-" + promptIdx}
 			name="model"
