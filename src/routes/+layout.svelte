@@ -80,9 +80,10 @@
 
 		window.addEventListener('resize', onResize);
 
+		initI18n();
+		await setLanguage();
+
 		if ($page.route.id === "/start") {
-			initI18n();
-			await setLanguage();
 			document.getElementById('splash-screen')?.remove();
 			loaded = true;
 
@@ -102,11 +103,6 @@
 		} catch (error) {
 			console.error('Error loading backend config:', error);
 		}
-		// Initialize i18n even if we didn't get a backend config,
-		// so `/error` can show something that's not `undefined`.
-
-		initI18n();
-		await setLanguage();
 
 		if (backendConfig) {
 			// Save Backend Status to Store
