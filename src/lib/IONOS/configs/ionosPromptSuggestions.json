@@ -2,78 +2,78 @@
   {
     "description": "Text zusammenfassen",
     "detail": "Gebe der AI längere Texte und lass dir diese schnell zusammenfassen.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "IONOS Chat-Assistent",
+    "model": "IONOS Chat-Assistent",
     "content": "Fasse mir einen Text zusammen."
   },
   {
     "description": "Texte überarbeiten",
     "detail": "Verbessere deine Texte durch unseren AI Lektor.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "KI Texter",
+    "model": "KI Texter",
     "content": "Verbessere meinen Text, um ihn professioneller klingen zu lassen."
   },
   {
     "description": "in neue Themen eintauchen",
     "detail": "Bekomme einen Überblick über neue Themen, indem du dir Sie von unserer AI erklären lässt.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "IONOS Chat-Assistent",
+    "model": "IONOS Chat-Assistent",
     "content": "Helfe mir ein Thema besser zu verstehen."
   },
   {
     "description": "Ideen sammeln",
     "detail": "Erzeuge vielseitige Ideen zu einem Thema deiner Wahl.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "IONOS Chat-Assistent",
+    "model": "IONOS Chat-Assistent",
     "content": "Helfe mir dabei Ideen zu sammeln."
   },
   {
     "description": "Programmieren",
     "detail": "Nutze die AI um dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
-    "model": "meta-llama/CodeLlama-13b-Instruct-hf",
-    "modelName": "AI Coder",
+    "modelName": "Codegenerierung",
+    "model": "Codegenerierung",
     "content": "Hilf mir dabei Code zu schreiben."
   },
   {
     "description": "einen Plan erstellen",
     "detail": "Gebe der AI Eckpunkte und lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "IONOS Chat-Assistent",
+    "model": "IONOS Chat-Assistent",
     "content": "Erstelle mir einen Plan."
   },
   {
     "description": "einen Firmentext schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel, Social Media Posts oder Content für deine Webseite schreiben zu lassen.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "KI Texter",
+    "model": "KI Texter",
     "content": "Hilf mir einen Firmentext zu verfassen."
   },
   {
     "description": "etwas in seinem Style schreiben lassen",
     "detail": "Stelle unserem AI Texter Beispieltexte zur Verfügung um Texte in deinem spezifischen Firmenstil erstellen zu lassen.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "KI Texter",
+    "model": "KI Texter",
     "content": "Schreibe einen Text und orientiere dich dabei am Schreibstil meines Beispieltextes."
   },
   {
     "description": "einen Blogartikel schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel für deine Firmenplattform zu schreiben.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "KI Texter",
+    "model": "KI Texter",
     "content": "Schreibe einen Blogartikel für meine Firmenwebseite."
   },
   {
     "description": "einen Social Media Post schreiben",
     "detail": "Nutze unseren AI Texter, um Social Media Posts für deinen Firmenaccount zu schreiben.",
-    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    "modelName": "AI Texter",
+    "modelName": "KI Texter",
+    "model": "KI Texter",
     "content": "Schreibe einen Social Media Post für mein LinkedIn Profil."
   },
   {
     "description": "ein Bild erstellen",
     "detail": "Nutze unseren leistungstarken Bildgenerator, um visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation zu erstellen.",
-    "model": "stabilityai/stable-diffusion-xl-base-1.0",
-    "modelName": "Image Generator",
+    "modelName": "Bildgenerierung",
+    "model": "Image Generator Pipeline Tobias",
     "content": "Fotorealistisches Bild einer Katze auf dem Sofa, high quality"
   }
 ]
