@@ -29,7 +29,6 @@
 
 	import { WEBUI_BASE_URL, WEBUI_HOSTNAME } from '$lib/constants';
 	import i18n, { initI18n, getLanguages } from '$lib/i18n';
-	import { bestMatchingLanguage } from '$lib/utils';
 	import IonosFooter from '$lib/IONOS/components/IonosFooter.svelte';
 	import IonosHeader from '$lib/IONOS/components/IonosHeader.svelte';
 
@@ -41,16 +40,7 @@
 	const BREAKPOINT = 768;
 
 	const setLanguage = async () => {
-		if (localStorage.locale) {
-			return;
-		}
-
-		const languages = await getLanguages();
-		const browserLanguages = navigator.languages
-			? navigator.languages
-			: [navigator.language || navigator.userLanguage];
-		const lang = bestMatchingLanguage(languages, browserLanguages, 'en-US');
-		$i18n.changeLanguage(lang);
+		$i18n.changeLanguage("de-DE");
 	};
 
 	/**
