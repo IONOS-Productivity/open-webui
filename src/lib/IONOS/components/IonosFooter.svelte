@@ -10,7 +10,12 @@
 
 <footer class={$showSidebar ? 'md:max-w-[calc(100%-260px)]' : ''}>
 	<div class="footer-right">
-		<span id="powered_by">{$i18n.t('powered by IONOS Model Hub', { ns: 'ionos' })}</span>
+		<span id="powered_by">
+			<a
+				href={$i18n.t('https://cloud.ionos.de/managed/ai-model-hub', { ns: 'ionos' })}
+				target="_blank"
+			>{$i18n.t('powered by IONOS Model Hub', { ns: 'ionos' })}</a>
+		</span>
 	</div>
 	<div id="copyright">
 		<p>© {currentYear} IONOS SE</p>
