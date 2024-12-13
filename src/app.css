@@ -215,3 +215,7 @@ input[type='number'] {
 
 	@apply absolute inset-0 z-0 text-gray-500;
 }
+
+body {
+	background-color: var(--default-background-color);
+}
