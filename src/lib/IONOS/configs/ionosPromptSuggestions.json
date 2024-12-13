@@ -3,77 +3,77 @@
     "description": "Text zusammenfassen",
     "detail": "Gebe der AI längere Texte und lass dir diese schnell zusammenfassen.",
     "modelName": "IONOS Chat-Assistent",
-    "model": "IONOS Chat-Assistent",
+    "model": "ionos-chat-assistent",
     "content": "Fasse mir einen Text zusammen."
   },
   {
     "description": "Texte überarbeiten",
     "detail": "Verbessere deine Texte durch unseren AI Lektor.",
     "modelName": "KI Texter",
-    "model": "KI Texter",
+    "model": "copywriter",
     "content": "Verbessere meinen Text, um ihn professioneller klingen zu lassen."
   },
   {
     "description": "in neue Themen eintauchen",
     "detail": "Bekomme einen Überblick über neue Themen, indem du dir Sie von unserer AI erklären lässt.",
     "modelName": "IONOS Chat-Assistent",
-    "model": "IONOS Chat-Assistent",
+    "model": "ionos-chat-assistent",
     "content": "Helfe mir ein Thema besser zu verstehen."
   },
   {
     "description": "Ideen sammeln",
     "detail": "Erzeuge vielseitige Ideen zu einem Thema deiner Wahl.",
     "modelName": "IONOS Chat-Assistent",
-    "model": "IONOS Chat-Assistent",
+    "model": "ionos-chat-assistent",
     "content": "Helfe mir dabei Ideen zu sammeln."
   },
   {
     "description": "Programmieren",
     "detail": "Nutze die AI um dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
     "modelName": "Codegenerierung",
-    "model": "Codegenerierung",
+    "model": "codegenerierung",
     "content": "Hilf mir dabei Code zu schreiben."
   },
   {
     "description": "einen Plan erstellen",
     "detail": "Gebe der AI Eckpunkte und lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
     "modelName": "IONOS Chat-Assistent",
-    "model": "IONOS Chat-Assistent",
+    "model": "ionos-chat-assistent",
     "content": "Erstelle mir einen Plan."
   },
   {
     "description": "einen Firmentext schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel, Social Media Posts oder Content für deine Webseite schreiben zu lassen.",
     "modelName": "KI Texter",
-    "model": "KI Texter",
+    "model": "copywriter",
     "content": "Hilf mir einen Firmentext zu verfassen."
   },
   {
     "description": "etwas in seinem Style schreiben lassen",
     "detail": "Stelle unserem AI Texter Beispieltexte zur Verfügung um Texte in deinem spezifischen Firmenstil erstellen zu lassen.",
     "modelName": "KI Texter",
-    "model": "KI Texter",
+    "model": "copywriter",
     "content": "Schreibe einen Text und orientiere dich dabei am Schreibstil meines Beispieltextes."
   },
   {
     "description": "einen Blogartikel schreiben",
     "detail": "Nutze unseren AI Texter, um Blogartikel für deine Firmenplattform zu schreiben.",
     "modelName": "KI Texter",
-    "model": "KI Texter",
+    "model": "copywriter",
     "content": "Schreibe einen Blogartikel für meine Firmenwebseite."
   },
   {
     "description": "einen Social Media Post schreiben",
     "detail": "Nutze unseren AI Texter, um Social Media Posts für deinen Firmenaccount zu schreiben.",
     "modelName": "KI Texter",
-    "model": "KI Texter",
+    "model": "copywriter",
     "content": "Schreibe einen Social Media Post für mein LinkedIn Profil."
   },
   {
     "description": "ein Bild erstellen",
     "detail": "Nutze unseren leistungstarken Bildgenerator, um visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation zu erstellen.",
     "modelName": "Bildgenerierung",
-    "model": "Image Generator Pipeline Tobias",
+    "model": "image-generator",
     "content": "Fotorealistisches Bild einer Katze auf dem Sofa, high quality"
   }
 ]

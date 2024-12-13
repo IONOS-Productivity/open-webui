@@ -27,7 +27,7 @@ import Trailer from '$lib/IONOS/components/Trailer.svelte';
 
 const i18n = getContext('i18n');
 
-const defautModel = "KI Texter";
+const defautModel = "copywriter";
 
 const pauseBeforeSubmit = 1000; // ms
 
