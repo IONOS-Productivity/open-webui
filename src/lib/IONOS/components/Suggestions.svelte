@@ -6,7 +6,7 @@
 	const dispatch = createEventDispatcher();
 
 	const maxSuggestionsToDisplay = 3;
-	let hoveredId = 0;
+	let hoveredId = -1;
 
 	// Filter for model
 	export let model;
