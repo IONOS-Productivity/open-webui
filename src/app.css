@@ -217,5 +217,5 @@ input[type='number'] {
 }
 
 body {
-	background-color: var(--default-background-color);
+	background-color: var(--primary-background-color);
 }
