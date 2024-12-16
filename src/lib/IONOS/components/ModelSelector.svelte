@@ -4,7 +4,6 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let className = '';
 	export let model: string | null = null;
 	export let modelName = null;
 
@@ -18,7 +17,7 @@
 	$: modelName = modelNameByModel.get(model);
 </script>
 
-<form class="flex flex-row justify-center {className}">
+<form class="flex flex-row justify-center {$$restProps.class}">
 	{#each models as currentModel, promptIdx}
 	<div class="m-1 flex flex-1 w-12 h-12">
 		<input
