@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { getContext, createEventDispatcher } from 'svelte';
-	import getModels from '$lib/IONOS/utils/getModels.ts';
+	import getModels from '$lib/IONOS/utils/getModels';
 
 	const dispatch = createEventDispatcher();
 
 	export let className = '';
-	export let model = null;
+	export let model: string | null = null;
 	export let modelName = null;
 
 	const models = getModels();
