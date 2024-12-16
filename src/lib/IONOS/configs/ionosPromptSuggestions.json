@@ -1,107 +1,107 @@
 [
   {
     "description": "Text zusammenfassen",
-    "detail": "Gebe der AI längere Texte und lass dir diese schnell zusammenfassen.",
+    "detail": "Geben Sie der AI längere Texte und lassen Sie sich diese schnell zusammenfassen.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Fasse mir einen Text zusammen."
   },
   {
     "description": "Texte überarbeiten",
-    "detail": "Lass von dir geschriebene Texte automatisiert verbessern.",
+    "detail": "Lassen Sie von Ihnen geschriebene Texte automatisiert verbessern.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Verbessere meinen Text, um ihn professioneller klingen zu lassen."
   },
   {
     "description": "in neue Themen eintauchen",
-    "detail": "Bekomme einen Überblick über neue Themen und lass dir diese erklären.",
+    "detail": "Bekommen Sie einen Überblick über neue Themen und lassen Sie sich diese erklären.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Helfe mir ein Thema besser zu verstehen."
   },
   {
     "description": "Ideen sammeln",
-    "detail": "Erzeuge vielseitige Ideen zu einem Thema deiner Wahl.",
+    "detail": "Erzeugen Sie vielseitige Ideen zu einem Thema Ihrer Wahl.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Helfe mir dabei Ideen zu sammeln."
   },
   {
     "description": "Programmieren",
-    "detail": "Lass dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
+    "detail": "Lassen Sie Funktionen oder ganze Skripte in der Programmiersprache Ihrer Wahl generieren.",
     "modelName": "Codegenerierung",
     "model": "codegenerierung",
     "content": "Schreibe eine Python-Funktion für mich. Frage mich zunächst nach meinen Anforderungen daran."
   },
   {
     "description": "Code Überarbeiten",
-    "detail": "Lass deinen Code automatisiert überarbeiten.",
+    "detail": "Lassen Sie Ihren Code automatisiert überarbeiten.",
     "modelName": "Codegenerierung",
     "model": "codegenerierung",
     "content": "Hilf mir meinen Code effizienter und kompakter zu machen. Frage mich zunächst, meinen Code einzugeben."
   },
   {
     "description": "Tests erstellen",
-    "detail": "Erstelle passende Tests für deinen Code.",
+    "detail": "Erstellen Sie passende Tests für Ihren Code.",
     "modelName": "Codegenerierung",
     "model": "codegenerierung",
     "content": "Erstelle mir passende Tests für meine Funktionen. Frage mich zunächst, die entsprechende Funktion einzugeben."
   },
   {
     "description": "einen Plan erstellen",
-    "detail": "Lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
+    "detail": "Lassen Sie sich einen Plan für Ihren nächsten Workshop, Ihre nächste Reise oder Ihr nächstes Training erstellen.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Erstelle mir einen Plan. "
   },
   {
     "description": "einen Firmentext schreiben",
-    "detail": "Erstelle Texte für deine Firmenkanäle.",
+    "detail": "Erstellen Sie passende Texte für Ihre Firmenkanäle.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Hilf mir einen Firmentext zu verfassen."
   },
   {
     "description": "etwas in seinem Style schreiben lassen",
-    "detail": "Stelle Beispieltexte zur Verfügung, um Inhalte in deinem spezifischen Firmenstil erstellen zu lassen.",
+    "detail": "Stellen Sie Beispieltexte zur Verfügung, um Inhalte in Ihrem spezifischen Firmenstil erstellen zu lassen.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Text und orientiere dich dabei am Schreibstil meines Beispieltextes."
   },
   {
     "description": "einen Blogartikel schreiben",
-    "detail": "Erstelle Blogartikel für deine Firmenplattform.",
+    "detail": "Erstellen Sie Blogartikel für Ihre Firmenplattform.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Blogartikel für meine Firmenwebseite."
   },
   {
     "description": "einen Social Media Post schreiben",
-    "detail": "Erstelle Social Media Posts für deinen Firmenaccount.",
+    "detail": "Erstellen Sie Social Media Posts für Ihren Firmenaccount.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Social Media Post für mein LinkedIn Profil."
   },
   {
     "description": "ein Bild erstellen",
-    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
+    "detail": "Generieren Sie visuelle Inhalte für Ihre Webseite, einen Blog oder Ihre nächste Präsentation.",
     "modelName": "Bildgenerierung",
     "model": "ionos-image-pipeline",
     "content": "Stilisiertes Bild, verschiedene Blautöne, abstrakt, runde formen, flächig"
   },
   {
     "description": "ein Bild erstellen",
-    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
+    "detail": "Generieren Sie visuelle Inhalte für Ihre Webseite, einen Blog oder Ihre nächste Präsentation.",
     "modelName": "Bildgenerierung",
     "model": "ionos-image-pipeline",
     "content": "Fotorealistisches Bild eines Waldes am Tag, Tau, high quality"
   },
   {
     "description": "ein Bild erstellen",
-    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
+    "detail": "Generieren Sie visuelle Inhalte für Ihre Webseite, einen Blog oder Ihre nächste Präsentation.",
     "modelName": "Bildgenerierung",
     "model": "ionos-image-pipeline",
-    "content": "Stilisiertes Bild künstlicher Intelligenz, futuristisch."
+    "content": "Stilisiertes Bild, künstlicher Intelligenz, futuristisch."
   }
 ]
