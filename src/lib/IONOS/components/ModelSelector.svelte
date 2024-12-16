@@ -20,7 +20,7 @@
 
 <form class="flex flex-row flex-wrap justify-center {$$restProps.class}">
 	{#each models as currentModel, promptIdx}
-		<button class="flex flex-1 exos-tile m-3" type="button">
+		<button class="flex flex-1 exos-tile mx-3 !mb-0" type="button">
 			<input
 				bind:group={model}
 				id={'model-' + promptIdx}
@@ -36,9 +36,9 @@
 	{/each}
 </form>
 
-<p class="exos-tile__label">
-	{modelName}
-</p>
+<div class="mt-1">
+	<p class="exos-headline exos-headline--paragraph exos-headline--activating">{modelName}</p>
+</div>
 
 <style>
 	input {
