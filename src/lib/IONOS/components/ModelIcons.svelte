@@ -5,7 +5,7 @@
 	enum Models {
 		CHAT = 'ionos-chat-assistent',
 		CODE = 'codegenerierung',
-		IMAGE = 'ionos-image-generatorpipeline',
+		IMAGE = 'ionos-image-pipeline',
 		TEXT = 'copywriter'
 	}
 </script>
