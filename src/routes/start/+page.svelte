@@ -117,13 +117,6 @@
 		<SendMessageButton class="p-0 mx-2 flex w-8 group/button" disabled={model === null} />
 	</form>
 
-	<h1 class="my-2 text-center text-lg mb-0 mt-5">
-		{$i18n.t(
-			'... or let yourself inspire by these examples how our assistants can support your work',
-			{ ns: 'ionos' }
-		)}
-	</h1>
-
 	<div class="w-3/5 py-5">
 		<Suggestions {model} on:select={selectSuggestion} />
 	</div>
