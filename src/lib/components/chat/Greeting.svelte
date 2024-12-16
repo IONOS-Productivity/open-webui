@@ -12,3 +12,9 @@
 		{$i18n.t('Welcome at IONOS GPT', { ns: 'ionos' })}
 	</h1>
 </div>
+
+<style>
+	h1 {
+		background-color: var(--primary-background-color);
+	}
+</style>
