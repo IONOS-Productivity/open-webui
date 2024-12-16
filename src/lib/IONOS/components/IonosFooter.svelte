@@ -6,6 +6,7 @@
 
 	const currentYear = new Date().getFullYear();
 	const i18n = getContext('i18n');
+	const showHelpIcon = false;
 </script>
 
 <footer class={$showSidebar ? 'md:max-w-[calc(100%-260px)]' : ''}>
@@ -42,11 +43,13 @@
 		>
 			{$i18n.t('Terms and Conditions', { ns: 'ionos' })}
 		</a>
-		<Dialog.Root>
-			<Dialog.Trigger class="exos-exos-icon exos-exos-icon-dialogmessage-32 scale-150 text-[var(--ion-brand-color)]"
-			></Dialog.Trigger>
-			<IonosHelp />
-		</Dialog.Root>
+		{#if showHelpIcon}
+			<Dialog.Root>
+				<Dialog.Trigger class="exos-exos-icon exos-exos-icon-dialogmessage-32 scale-150 text-[var(--ion-brand-color)]"
+				></Dialog.Trigger>
+				<IonosHelp />
+			</Dialog.Root>
+		{/if}
 	</div>
 </footer>
 
