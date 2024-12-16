@@ -114,7 +114,7 @@
 			className="w-full rounded-lg p-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none h-full bg-transparent"
 		/>
 
-		<SendMessageButton class="p-0 mx-2 flex w-8 group/button" disabled={model === null} />
+		<SendMessageButton class="p-0 mx-2 flex w-8 group/button" disabled={model === null || prompt.length === 0} />
 	</form>
 
 	<div class="w-3/5 py-5">
