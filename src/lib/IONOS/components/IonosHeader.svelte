@@ -12,7 +12,7 @@
 
 <header class="ionos-header z-10">
 	<div class="header-left">
-		<a href="/">
+		<a href="/start">
 			<svg
 				id="ionos-logo"
 				width="90"
