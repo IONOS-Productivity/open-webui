@@ -8,14 +8,14 @@
   },
   {
     "description": "Texte überarbeiten",
-    "detail": "Verbessere deine Texte durch unseren AI Lektor.",
-    "modelName": "KI Texter",
-    "model": "copywriter",
+    "detail": "Lass von dir geschriebene Texte automatisiert verbessern.",
+    "modelName": "IONOS Chat-Assistent",
+    "model": "ionos-chat-assistent",
     "content": "Verbessere meinen Text, um ihn professioneller klingen zu lassen."
   },
   {
     "description": "in neue Themen eintauchen",
-    "detail": "Bekomme einen Überblick über neue Themen, indem du dir Sie von unserer AI erklären lässt.",
+    "detail": "Bekomme einen Überblick über neue Themen und lass dir diese erklären.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
     "content": "Helfe mir ein Thema besser zu verstehen."
@@ -29,51 +29,79 @@
   },
   {
     "description": "Programmieren",
-    "detail": "Nutze die AI um dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
+    "detail": "Lass dir Funktionen oder ganze Skripte in der Programmiersprache deiner Wahl zu generieren.",
     "modelName": "Codegenerierung",
     "model": "codegenerierung",
-    "content": "Hilf mir dabei Code zu schreiben."
+    "content": "Schreibe eine Python-Funktion für mich. Frage mich zunächst nach meinen Anforderungen daran."
+  },
+  {
+    "description": "Code Überarbeiten",
+    "detail": "Lass deinen Code automatisiert überarbeiten.",
+    "modelName": "Codegenerierung",
+    "model": "codegenerierung",
+    "content": "Hilf mir meinen Code effizienter und kompakter zu machen. Frage mich zunächst, meinen Code einzugeben."
+  },
+  {
+    "description": "Tests erstellen",
+    "detail": "Erstelle passende Tests für deinen Code.",
+    "modelName": "Codegenerierung",
+    "model": "codegenerierung",
+    "content": "Erstelle mir passende Tests für meine Funktionen. Frage mich zunächst, die entsprechende Funktion einzugeben."
   },
   {
     "description": "einen Plan erstellen",
-    "detail": "Gebe der AI Eckpunkte und lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
+    "detail": "Lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
-    "content": "Erstelle mir einen Plan."
+    "content": "Erstelle mir einen Plan. "
   },
   {
     "description": "einen Firmentext schreiben",
-    "detail": "Nutze unseren AI Texter, um Blogartikel, Social Media Posts oder Content für deine Webseite schreiben zu lassen.",
+    "detail": "Erstelle Texte für deine Firmenkanäle.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Hilf mir einen Firmentext zu verfassen."
   },
   {
     "description": "etwas in seinem Style schreiben lassen",
-    "detail": "Stelle unserem AI Texter Beispieltexte zur Verfügung um Texte in deinem spezifischen Firmenstil erstellen zu lassen.",
+    "detail": "Stelle Beispieltexte zur Verfügung, um Inhalte in deinem spezifischen Firmenstil erstellen zu lassen.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Text und orientiere dich dabei am Schreibstil meines Beispieltextes."
   },
   {
     "description": "einen Blogartikel schreiben",
-    "detail": "Nutze unseren AI Texter, um Blogartikel für deine Firmenplattform zu schreiben.",
+    "detail": "Erstelle Blogartikel für deine Firmenplattform.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Blogartikel für meine Firmenwebseite."
   },
   {
     "description": "einen Social Media Post schreiben",
-    "detail": "Nutze unseren AI Texter, um Social Media Posts für deinen Firmenaccount zu schreiben.",
+    "detail": "Erstelle Social Media Posts für deinen Firmenaccount.",
     "modelName": "KI Texter",
     "model": "copywriter",
     "content": "Schreibe einen Social Media Post für mein LinkedIn Profil."
   },
   {
     "description": "ein Bild erstellen",
-    "detail": "Nutze unseren leistungstarken Bildgenerator, um visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation zu erstellen.",
+    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
     "modelName": "Bildgenerierung",
     "model": "image-generator",
-    "content": "Fotorealistisches Bild einer Katze auf dem Sofa, high quality"
+    "content": "Stilisiertes Bild, verschiedene Blautöne, abstrakt, runde formen, flächig"
+  },
+  {
+    "description": "ein Bild erstellen",
+    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
+    "modelName": "Bildgenerierung",
+    "model": "image-generator",
+    "content": "Fotorealistisches Bild eines Waldes am Tag, Tau, high quality"
+  },
+  {
+    "description": "ein Bild erstellen",
+    "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
+    "modelName": "Bildgenerierung",
+    "model": "image-generator",
+    "content": "Stilisiertes Bild künstlicher Intelligenz, futuristisch."
   }
 ]
