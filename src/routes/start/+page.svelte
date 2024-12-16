@@ -21,9 +21,9 @@ import { config } from '$lib/stores';
 import Greeting from '$lib/components/chat/Greeting.svelte';
 import Suggestions from '$lib/IONOS/components/Suggestions.svelte';
 import ModelSelector from '$lib/IONOS/components/ModelSelector.svelte';
-import PaperPlane from '$lib/components/icons/PaperPlane.svelte';
 import Textarea from '$lib/components/common/Textarea.svelte';
 import Trailer from '$lib/IONOS/components/Trailer.svelte';
+import SendMessageButton from '$lib/IONOS/components/SendMessageButton.svelte';
 
 const i18n = getContext('i18n');
 
@@ -114,13 +114,10 @@ function selectSuggestion({ detail: { prompt: selectedPrompt, model: selectedMod
 		/>
 
 
-		<button
-			disabled={model === null}
-			type="submit"
+		<SendMessageButton
 			class="p-0 mx-2 flex w-8 group/button"
-		>
-			<PaperPlane className="fill-gray-400 group-disabled/button:fill-gray-400 cursor-pointer group-disabled/button:cursor-default hover:fill-ionos" />
-		</button>
+			disabled={model === null}
+		/>
 	</form>
 
 	<h1 class="my-2 text-center text-lg mb-0 mt-5">{$i18n.t('... or let yourself inspire by these examples how our assistants can support your work', { ns: "ionos" })}</h1>
