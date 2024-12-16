@@ -104,25 +104,28 @@
 <div class="overflow-auto w-full h-full flex flex-col items-center">
 	<Greeting />
 
-	<h1 class="my-2 text-center text-lg mb-5 mt-5">
-		{$i18n.t('Choose the AI assistant that suits you.', { ns: 'ionos' })}
+	<h1 class="my-2 text-center text-lg mb-5 mt-32 exos-headline exos-headline--paragraph exos-headline--activating"
+	>{$i18n.t('Choose the AI assistant that suits you.', { ns: 'ionos' })}
 	</h1>
 
 	<ModelSelector bind:model bind:modelName />
 
 	<form
+		id="ai-prompt-input"
 		on:submit|preventDefault={(e) => submit(prompt, model)}
-		class="flex items-center {$mobile ? 'min-w-full' : 'min-w-96'} h-fit my-4 border rounded-xl"
+		class="flex relative items-center {$mobile ? 'min-w-full' : 'min-w-[580px]'} h-fit my-4 border rounded-xl"
 	>
+		<span class="-ai-icon absolute exos-exos-icon exos-exos-icon-ai z-50 top-2 right-2 text-2xl"></span>
 		<Textarea
 			bind:this={promptTextarea}
 			bind:value={prompt}
+			rows=8
 			disabled={model === null}
 			placeholder={$i18n.t('Send a message to {{modelName}}', { ns: 'ionos', modelName })}
-			className="w-full rounded-lg p-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none h-full bg-transparent"
+			className="exos-input-textarea"
 		/>
 
-		<SendMessageButton class="p-0 mx-2 flex w-8 group/button" disabled={model === null || !showSubmitButton} />
+		<SendMessageButton class="absolute p-0 mx-2 flex w-8 group/button right-2 bottom-2 {model === null || !showSubmitButton ? 'hidden' : ''}" disabled={model === null || !showSubmitButton} />
 	</form>
 
 	<div class="w-3/5 py-5">
@@ -131,3 +134,12 @@
 
 	<Trailer />
 </div>
+
+<style>
+	h1 {
+		color: var(--default-text-color);
+	}
+	#ai-prompt-input .-ai-icon {
+		color: var(--primary-shape-color);
+	}
+</style>
