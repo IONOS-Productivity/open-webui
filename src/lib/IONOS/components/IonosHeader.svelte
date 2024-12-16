@@ -10,7 +10,7 @@
 	let registerDialogOpen: boolean;
 </script>
 
-<header class="ionos-header">
+<header class="ionos-header z-10">
 	<div class="header-left">
 		<a href="/">
 			<svg
