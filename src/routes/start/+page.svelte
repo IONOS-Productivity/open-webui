@@ -15,7 +15,7 @@
 	 */
 
 	import { getContext } from 'svelte';
-	import { config } from '$lib/stores';
+	import { config, mobile } from '$lib/stores';
 
 	import Greeting from '$lib/components/chat/Greeting.svelte';
 	import Suggestions from '$lib/IONOS/components/Suggestions.svelte';
@@ -104,7 +104,7 @@
 
 	<form
 		on:submit|preventDefault={(e) => submit(prompt, model)}
-		class="flex items-center min-w-96 h-fit my-4 border rounded-xl"
+		class="flex items-center {$mobile ? 'min-w-full' : 'min-w-96'} h-fit my-4 border rounded-xl"
 	>
 		<Textarea
 			bind:this={promptTextarea}
