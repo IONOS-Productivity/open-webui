@@ -47,18 +47,22 @@
 			<IonosRegister dialogOpen={registerDialogOpen} />
 		</Dialog.Root>
 		{#if $user}
-		<Dialog.Root bind:open={$feedbackDialog.open}>
-			<Dialog.Trigger class="px-4 py-2 exos-button exos-button--secondary
-				{$mobile ? 'exos-button--icon-only' : 'exos-button--ellipsized' }
-				">
-				{#if $mobile }
-					<span class="exos-button__icon exos-exos-icon exos-exos-icon-feedback-14"></span><span class="exos-button__text">{$i18n.t('Feedback', { ns: 'ionos' })}</span>
-				{:else}
-					{$i18n.t('Feedback', { ns: 'ionos' })}
-				{/if}
-			</Dialog.Trigger>
-			<IonosFeedback dialogOpen={$feedbackDialog.open} noRating={$feedbackDialog.rating !== -1} />
-		</Dialog.Root>
+			<Dialog.Root bind:open={$feedbackDialog.open}>
+				<Dialog.Trigger
+					class="px-4 py-2 exos-button exos-button--secondary
+				{$mobile ? 'exos-button--icon-only' : 'exos-button--ellipsized'}
+				"
+				>
+					{#if $mobile}
+						<span class="exos-button__icon exos-exos-icon exos-exos-icon-feedback-14"></span><span
+							class="exos-button__text">{$i18n.t('Feedback', { ns: 'ionos' })}</span
+						>
+					{:else}
+						{$i18n.t('Feedback', { ns: 'ionos' })}
+					{/if}
+				</Dialog.Trigger>
+				<IonosFeedback dialogOpen={$feedbackDialog.open} noRating={$feedbackDialog.rating !== -1} />
+			</Dialog.Root>
 		{/if}
 	</div>
 </header>
