@@ -57,4 +57,7 @@ input:checked + label {
 	color: var(--interactive-text-color);
 	font-size: 14px;
 }
+.exos-card {
+	border: 1px solid var(--hovered-corporate-background-color);
+}
 </style>
