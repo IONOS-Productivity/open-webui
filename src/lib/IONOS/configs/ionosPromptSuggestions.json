@@ -53,7 +53,7 @@
     "detail": "Lass dir einen Plan für deinen nächsten Workshop, deine nächste Reise oder dein Training zu erstellen.",
     "modelName": "IONOS Chat-Assistent",
     "model": "ionos-chat-assistent",
-    "content": "Erstelle mir einen Plan."
+    "content": "Erstelle mir einen Plan. "
   },
   {
     "description": "einen Firmentext schreiben",
@@ -87,21 +87,21 @@
     "description": "ein Bild erstellen",
     "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
     "modelName": "Bildgenerierung",
-    "model": "ionos-image-generatorpipeline",
+    "model": "ionos-image-pipeline",
     "content": "Stilisiertes Bild, verschiedene Blautöne, abstrakt, runde formen, flächig"
   },
   {
     "description": "ein Bild erstellen",
     "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
     "modelName": "Bildgenerierung",
-    "model": "ionos-image-generatorpipeline",
+    "model": "ionos-image-pipeline",
     "content": "Fotorealistisches Bild eines Waldes am Tag, Tau, high quality"
   },
   {
     "description": "ein Bild erstellen",
     "detail": "Generiere visuelle Inhalte für deine Webseite, einen Blog oder deine nächste Präsentation.",
     "modelName": "Bildgenerierung",
-    "model": "ionos-image-generatorpipeline",
+    "model": "ionos-image-pipeline",
     "content": "Stilisiertes Bild künstlicher Intelligenz, futuristisch."
   }
 ]
