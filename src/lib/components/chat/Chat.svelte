@@ -508,7 +508,8 @@
 		await showArtifacts.set(false);
 
 		if ($page.url.pathname.includes('/c/')) {
-			window.history.replaceState(history.state, '', `/`);
+			goto('/start');
+			return;
 		}
 
 		autoScroll = true;
