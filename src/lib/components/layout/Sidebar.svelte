@@ -422,9 +422,9 @@
 				class="flex flex-1 rounded-lg px-2 py-1 h-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
 				href="/"
 				draggable="false"
-				on:click={async () => {
+				on:click|preventDefault={async () => {
 					selectedChatId = null;
-					await goto('/');
+					await goto('/start');
 					const newChatButton = document.getElementById('new-chat-button');
 					setTimeout(() => {
 						newChatButton?.click();
