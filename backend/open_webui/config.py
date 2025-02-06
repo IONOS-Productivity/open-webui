@@ -1313,7 +1313,6 @@ if CHROMA_HTTP_HEADERS:
 else:
     CHROMA_HTTP_HEADERS = None
 CHROMA_HTTP_SSL = os.environ.get("CHROMA_HTTP_SSL", "false").lower() == "true"
-# this uses the model defined in the Dockerfile ENV variable. If you dont use docker or docker based deployments such as k8s, the default embedding model will be used (sentence-transformers/all-MiniLM-L6-v2)
 
 # Milvus
 
@@ -1431,6 +1430,9 @@ PDF_EXTRACT_IMAGES = PersistentConfig(
     os.environ.get("PDF_EXTRACT_IMAGES", "False").lower() == "true",
 )
 
+# this uses the model defined in the Dockerfile ENV variable. If you dont use
+# docker or docker based deployments such as k8s, the default embedding model
+# will be used (sentence-transformers/all-MiniLM-L6-v2)
 RAG_EMBEDDING_MODEL = PersistentConfig(
     "RAG_EMBEDDING_MODEL",
     "rag.embedding_model",
