@@ -3,3 +3,4 @@
 * [Configurations](./configurations.md)
 * [Customizations](./customizations.md)
 * [Git](./git.md)
+* [Tricks](./tricks.md)
