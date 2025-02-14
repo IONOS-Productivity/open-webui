@@ -18,7 +18,6 @@
 	import { page } from '$app/stores';
 
 	import ShareChatModal from '../chat/ShareChatModal.svelte';
-	import ModelSelector from '../chat/ModelSelector.svelte';
 	import Tooltip from '../common/Tooltip.svelte';
 	import Menu from '$lib/components/layout/Navbar/Menu.svelte';
 	import UserMenu from '$lib/components/layout/Sidebar/UserMenu.svelte';
@@ -26,6 +25,7 @@
 	import AdjustmentsHorizontal from '../icons/AdjustmentsHorizontal.svelte';
 
 	import PencilSquare from '../icons/PencilSquare.svelte';
+	import IonosLogo from '$lib/IONOS/components/icons/IonosLogo.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -34,8 +34,7 @@
 	export const shareEnabled: boolean = false;
 
 	export let chat;
-	export let selectedModels;
-	export let showModelSelector = true;
+	export const selectedModels = [];
 
 	let showShareChatModal = false;
 	let showDownloadChatModal = false;
@@ -70,13 +69,11 @@
 			</div>
 
 			<div
-				class="flex-1 overflow-hidden max-w-full py-0.5
-			{$showSidebar ? 'ml-1' : ''}
-			"
+				class="items-center flex flex-1 h-10 overflow-hidden max-w-full py-0.5"
 			>
-				{#if showModelSelector}
-					<ModelSelector bind:selectedModels showSetDefault={!shareEnabled} />
-				{/if}
+				<a href="/">
+					<IonosLogo className={"h-6"} />
+				</a>
 			</div>
 
 			<div class="self-start flex flex-none items-center text-gray-600 dark:text-gray-400">
