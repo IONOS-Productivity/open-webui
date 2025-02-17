@@ -26,6 +26,7 @@
 
 	import PencilSquare from '../icons/PencilSquare.svelte';
 	import IonosLogo from '$lib/IONOS/components/icons/IonosLogo.svelte';
+	import Shield from '$lib/IONOS/components/icons/Shield.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -74,6 +75,13 @@
 				<a href="/">
 					<IonosLogo className={"h-6"} />
 				</a>
+			</div>
+
+			<div
+				class="flex gap-2 items-center px-3"
+			>
+				<Shield className={"h-6 w-6 inline-block"} />
+				{$i18n.t('Privacy by Design!', { ns: 'ionos' })}
 			</div>
 
 			<div class="self-start flex flex-none items-center text-gray-600 dark:text-gray-400">
