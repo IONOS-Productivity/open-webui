@@ -10,6 +10,7 @@
 	export const tickSpeed: number = 100;
 	export let items: ScrollerItem[] = [];
 
+	let carousel: Carousel = null;
 	let width: number = 0;
 	let inside: boolean = false;
 
@@ -17,18 +18,20 @@
 	// Add two to have one space item at the left and one at the right
 	$: count = Math.ceil(width / itemWidth) + 2;
 	$: toShowCount = Math.ceil(width / itemWidth) + 2;
-	$: console.log(toShowCount, inside);
+	$: console.log(width, itemWidth, toShowCount, inside, carousel);
 </script>
 
 <div
+	on:mouseenter={() => carousel.pause()}
+	on:mouseleave={() => carousel.resume()}
 	bind:clientWidth={width}>
 	<Carousel
+		bind:this={carousel}
 		particlesToShow={toShowCount}
 		autoplayDuration={0}
 		duration={5000}
 		infinite
 		autoplay
-		pauseOnFocus={true}
 		timingFunction="linear"
 		dots={false}
 		arrows={false}
