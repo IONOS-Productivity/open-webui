@@ -1,25 +1,55 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import type { ScrollerItem } from './scrollerItem.d.ts';
+	import Carousel from 'svelte-carousel'
+
+	const itemWidth: number = 450;
 
 	const dispatch = createEventDispatcher();
 
 	export const tickSpeed: number = 100;
 	export let items: ScrollerItem[] = [];
+
+	let width: number = 0;
+	let inside: boolean = false;
+
+	// Round up to ensure we render one item that's visible ever so slighly
+	// Add two to have one space item at the left and one at the right
+	$: count = Math.ceil(width / itemWidth) + 2;
+	$: toShowCount = Math.ceil(width / itemWidth) + 2;
+	$: console.log(toShowCount, inside);
 </script>
 
-<div class="overflow-hidden">
-	<div class="m-4">
-		{#each items as { id, text }}
-			<button
-				class="fw-60 py-4 px-2 bg-white max-w-64 text-sm"
-				data-id={id}
-				on:click={() => {
-					dispatch('click', id);
-				}}
-			>
-				{text} →
-			</button>
-		{/each}
-	</div>
+<div
+	bind:clientWidth={width}>
+	<Carousel
+		particlesToShow={toShowCount}
+		autoplayDuration={0}
+		duration={5000}
+		infinite
+		autoplay
+		pauseOnFocus={true}
+		timingFunction="linear"
+		dots={false}
+		arrows={false}
+		swiping={false}
+	>
+			{#each items as { id, text }}
+				<button
+					class="fw-60 m-2 py-4 px-2 bg-white max-w-64 text-sm"
+					data-id={id}
+					on:click={() => {
+						dispatch('click', id);
+					}}
+				>
+					{text} →
+				</button>
+			{/each}
+	</Carousel>
 </div>
+
+<style>
+	button {
+		width: 200px;
+	}
+</style>
