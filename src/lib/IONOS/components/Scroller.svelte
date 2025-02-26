@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import type { ScrollerItem } from './scrollerItem.d.ts';
 
 	const dispatcher = createEventDispatcher();
 
 	// Pixels per second
-	const speed = 50;
+	const speed = 25;
 
+	export let direction = 'left';
 	export let items;
 
 	let el;
@@ -16,13 +18,13 @@
 </script>
 
 <div
-	class="full-width overflow-hidden position-relative"
+	class="full-width overflow-hidden position-relative my-2"
 	on:mouseenter={() => { el.style.animationPlayState = 'paused'; }}
 	on:mouseleave={() => { el.style.animationPlayState = 'running'; }}
 	>
 	<div
 		bind:this={el}
-		class="carousel flex will-change-transform whitespace-nowrap"
+		class="flex will-change-transform whitespace-nowrap {direction === 'left' ? 'slide-left' : 'slide-right'}"
 		style:animation-duration={`${duration}s`}
 		style:width={`${fullWidth * 2}px`}
 	>
@@ -44,21 +46,33 @@
 </div>
 
 <style>
-.carousel {
-    animation: slide linear infinite;
+.slide-left {
+    animation: slide-left linear infinite;
+}
+
+.slide-right {
+    animation: slide-right linear infinite;
 }
 
 span {
 	width: 280px;
 }
 
-@keyframes slide {
+@keyframes slide-left {
     0% {
         transform: translateX(0);
     }
     100% {
-        /* Changed from -100% to -50% */
         transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 </style>
