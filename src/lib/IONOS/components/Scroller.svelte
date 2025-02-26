@@ -1,58 +1,64 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
-	import type { ScrollerItem } from './scrollerItem.d.ts';
-	import Carousel from 'svelte-carousel'
+	import { createEventDispatcher } from 'svelte';
 
-	const itemWidth: number = 450;
+	const dispatcher = createEventDispatcher();
 
-	const dispatch = createEventDispatcher();
+	// Pixels per second
+	const speed = 50;
 
-	export const tickSpeed: number = 100;
-	export let items: ScrollerItem[] = [];
+	export let items;
 
-	let carousel: Carousel = null;
-	let width: number = 0;
-	let inside: boolean = false;
+	let el;
 
-	// Round up to ensure we render one item that's visible ever so slighly
-	// Add two to have one space item at the left and one at the right
-	$: count = Math.ceil(width / itemWidth) + 2;
-	$: toShowCount = Math.ceil(width / itemWidth) + 2;
-	$: console.log(width, itemWidth, toShowCount, inside, carousel);
+	$: scrollWidth = el?.scrollWidth;
+	$: fullWidth = scrollWidth / 2;
+	$: duration = fullWidth / speed;
 </script>
 
 <div
-	on:mouseenter={() => carousel.pause()}
-	on:mouseleave={() => carousel.resume()}
-	bind:clientWidth={width}>
-	<Carousel
-		bind:this={carousel}
-		particlesToShow={toShowCount}
-		autoplayDuration={0}
-		duration={5000}
-		infinite
-		autoplay
-		timingFunction="linear"
-		dots={false}
-		arrows={false}
-		swiping={false}
+	class="full-width overflow-hidden position-relative"
+	on:mouseenter={() => { el.style.animationPlayState = 'paused'; }}
+	on:mouseleave={() => { el.style.animationPlayState = 'running'; }}
 	>
-			{#each items as { id, text }}
-				<button
-					class="fw-60 m-2 py-4 px-2 bg-white max-w-64 text-sm"
-					data-id={id}
-					on:click={() => {
-						dispatch('click', id);
-					}}
-				>
-					{text} →
-				</button>
-			{/each}
-	</Carousel>
+	<div
+		bind:this={el}
+		class="carousel flex will-change-transform whitespace-nowrap"
+		style:animation-duration={`${duration}s`}
+		style:width={`${fullWidth * 2}px`}
+	>
+		{#each items as { id, text }}
+			<span
+				on:click={() => { dispatcher('click', id); }}
+				data-id={id}
+				class="grow-0 shrink-0 basis-auto text-sm bg-gray-100 text-wrap h-20 mx-2 p-4 last:p-0 cursor-pointer"
+			>{ text }</span>
+		{/each}
+		{#each items as { id, text }}
+			<span
+				on:click={() => { dispatcher('click', id); }}
+				data-id={id}
+				class="grow-0 shrink-0 basis-auto text-sm bg-gray-100 text-wrap h-20 mx-2 p-4 last:p-0 cursor-pointer"
+			>{ text }</span>
+		{/each}
+	</div>
 </div>
 
 <style>
-	button {
-		width: 200px;
-	}
+.carousel {
+    animation: slide linear infinite;
+}
+
+span {
+	width: 280px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Changed from -100% to -50% */
+        transform: translateX(-50%);
+    }
+}
 </style>

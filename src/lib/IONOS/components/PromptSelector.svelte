@@ -15,7 +15,7 @@
 
 <div>
 	<Scroller
-		on:click={(id) => selectPrompt(id)}
+		on:click={({ detail: id }) => selectPrompt(id)}
 		items={mapped}
 	/>
 </div>
