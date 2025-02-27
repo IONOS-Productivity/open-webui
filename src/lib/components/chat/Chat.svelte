@@ -386,15 +386,22 @@
 		}
 
 		if (ionosGptStartupPrompt) {
-			setTimeout(() => initNewChat());
+			setTimeout(() => {
+				console.log('## mount: initNewChat() through timeout');
+				initNewChat()
+			});
 		}
 
 		window.addEventListener('message', onMessageHandler);
 		$socket?.on('chat-events', chatEventHandler);
 
+		console.log('## chatId=', !$chatId);
 		if (!$chatId) {
+			console.log('## no chatId');
 			chatIdUnsubscriber = chatId.subscribe(async (value) => {
+				console.log('## chatId subscriber, value=', value);
 				if (!value) {
+					console.log('## mount: initNewChat() through subscriber');
 					await initNewChat();
 				}
 			});
@@ -703,6 +710,7 @@
 		await chatId.set('');
 		await chatTitle.set('');
 
+		console.log('## initNewChat(): reset history');
 		history = {
 			messages: {},
 			currentId: null
@@ -1309,6 +1317,7 @@
 		};
 
 		// Add message to history and Set currentId to messageId
+		console.log('## submitPrompt: add message to history with ID', userMessageId);
 		history.messages[userMessageId] = userMessage;
 		history.currentId = userMessageId;
 
@@ -1392,13 +1401,14 @@
 		await saveChatHandler($chatId);
 
 		const _chatId = JSON.parse(JSON.stringify($chatId));
-		await Promise.all(
-			selectedModelIds.map(async (modelId, _modelIdx) => {
+
+		const promises = selectedModelIds.map(async (modelId, _modelIdx) => {
 				console.log('modelId', modelId);
 				const model = $models.filter((m) => m.id === modelId).at(0);
 
 				if (model) {
 					const messages = createMessagesList(parentId);
+					console.log('## sendPrompt: messages=', messages, 'for parentId=', parentId);
 					// If there are image files, check if model is vision capable
 					const hasImages = messages.some((message) =>
 						message.files?.some((file) => file.type === 'image')
@@ -1449,8 +1459,10 @@
 				} else {
 					toast.error($i18n.t(`Model {{modelId}} not found`, { modelId }));
 				}
-			})
-		);
+		});
+
+		console.log('promises=', promises);
+		await Promise.all(promises).catch((e) => console.error('Error in hopeless spaghetti code reached:' , e));
 
 		currentChatPage.set(1);
 		chats.set(await getChatList(localStorage.token, $currentChatPage));
@@ -1691,6 +1703,7 @@
 			];
 		}
 
+		console.log('## submitMessage(): set user message for ID', userMessageId);
 		history.messages[userMessageId] = userMessage;
 		history.currentId = userMessageId;
 
