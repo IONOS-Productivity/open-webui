@@ -1222,6 +1222,8 @@
 				})
 			);
 
+			// FIXME This line is redundant - this was already done
+			// before the if (done) a couple of lines above
 			history.messages[message.id] = message;
 			await chatCompletedHandler(chatId, message.model, message.id, createMessagesList(message.id));
 		}
