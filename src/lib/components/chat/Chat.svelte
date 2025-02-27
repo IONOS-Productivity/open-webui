@@ -842,6 +842,10 @@
 		}
 
 		const message = history.messages[responseMessageId];
+		if (!message) {
+			console.error('Message not found in history by ID ', responseMessageId);
+			return [];
+		}
 		if (message?.parentId) {
 			return [...createMessagesList(message.parentId), message];
 		} else {
