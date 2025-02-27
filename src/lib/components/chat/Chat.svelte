@@ -390,6 +390,7 @@
 				console.log('## mount: initNewChat() through timeout');
 				initNewChat()
 			});
+			ionosGptStartupModel = '';
 		}
 
 		window.addEventListener('message', onMessageHandler);
@@ -752,6 +753,7 @@
 
 		if (ionosGptStartupPrompt) {
 			prompt = ionosGptStartupPrompt;
+			ionosGptStartupPrompt = '';
 
 			if (prompt) {
 				await tick();
